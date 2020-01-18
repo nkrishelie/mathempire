@@ -171,7 +171,7 @@
 
 
 % ОФОРМЛЕНИЕ ССЫЛОК
-\usepackage[unicode,colorlinks=true,linkcolor=deepskyblue,filecolor=blue,urlcolor=darkred,citecolor=darkred,pdfauthor={Dr.(rus) Nikolay Kasimirow},pdftitle={Les Archetypes de Mathematique},bookmarks=true]{hyperref}
+\usepackage[unicode,colorlinks=true,linkcolor=deepskyblue,filecolor=blue,urlcolor=darkred,citecolor=darkred,pdfauthor={Dr.(rus) Nikolay Kasimirow},pdftitle={Lectures of Savvateev},bookmarks=true]{hyperref}
 %\usepackage[unicode,colorlinks=true,linktoc=none,linkcolor=darkred,urlcolor=black,citecolor=darkred,pdfauthor={Dr.(rus) Nikolay Kasimirow},pdftitle={Les Archetypes de Mathematique},bookmarks=true]{hyperref}   % ДЛЯ ПЕЧАТИ
 \usepackage{bookmark}
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
@@ -299,10 +299,12 @@
 
 % ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
 \newcounter{vrz}\setcounter{vrz}{0}
-\newcommand{\vrezka}[2][]{\refstepcounter{vrz}{\sffamily
+\newcommand{\vrezka}[2][]{\refstepcounter{vrz}
+{\sffamily
 \noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}\nopagebreak
 
-\noindent\textbf{Комментарий~\arabic{vrz}}. #1\nopagebreak
+\noindent\textbf{Аннотация%~\arabic{vrz}
+}. #1\nopagebreak
 
 #2 }\nopagebreak
  
@@ -587,50 +589,12 @@
 %\renewcommand{\lstlistingname}{Листинг на \Python}
 
 
-\makeindex  % генерация предметного указателя
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%   ТЕКСТ   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%%% ПЕРВАЯ СТРАНИЦА НА РУССКОМ (заголовок и автор)
-
-{\thispagestyle{empty}
-%\clearpage
-%\setcounter{page}{0}
-
-
-\begin{flushright}
-\quad
-
-\vspace{2cm}
-
-{\fontsize{100pt}{0pt}\bfseries\sffamily ВВЕДЕНИЕ В\\[30pt] МАТЕМАТИКУ}
-
-\vspace{2cm}
-
-{\fontsize{20pt}{22pt}\sffamily живые лекции\\
-для увлекающихся\\[5pt]
-}
-
-\vspace{2cm}
-
-{\Large\bfseries\sffamily 	А.~В.~Савватеев}
-
-\vfill
-
-{\Large\bfseries\sffamily 	Москва, \number\year}
-\end{flushright}
-}
-
-
-\shorttableofcontents{Оглавление}{0}
-\markboth{}{}
-
-\clearpage
-\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
-\tableofcontents
-
+%\input{titile}
 
 \input{ariphmetics}
 
