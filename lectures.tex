@@ -11,7 +11,7 @@
 \usepackage{adjustbox}
 \usepackage{amssymb}
 \usepackage[TS1,T2A]{fontenc}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 %\usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -68,7 +68,7 @@
 \makeatother
 \newcommand{\newchapter}[2][]{     % допускает необязательный параметр, куда помещается вторая часть названия
 \clearpage
-\ifodd\value{page}\else\quad\clearpage\fi
+%\ifodd\value{page}\else\quad\clearpage\fi
 \refstepcounter{chapter}
 \setcounter{section}{0}
 \setcounter{upr}{0}
@@ -270,9 +270,9 @@
 
 
 \newcommand{\addcommL}[2][]{
-\begin{wrapfigure}{l}{15mm}
+\begin{wrapfigure}{l}{10mm}
 %\vspace*{-12pt}
-\hspace*{-5mm}
+\hspace*{-10mm}
 \textcolor{mauve}{
 \begin{minipage}{20mm}\setstretch{0.7}
 \begin{flushright}
@@ -588,7 +588,7 @@
 	{Ґ}{{\selectfont\char128}}1
 }
 %\renewcommand{\lstlistingname}{Листинг на \Python}
-\PrerenderUnicode{ü}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -598,11 +598,14 @@
 
 %\input{titile}
 
-%\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
+\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
 \tableofcontents
 
 
 \input{ariphmetics}
+\input{Division}
+\input{Structures}
+\input{RealAnalysis}
 
 %\input{literature}
 
