@@ -1,0 +1,625 @@
+% НАСТРОЙКИ ДОКУМЕНТА
+\documentclass[11pt]{book}
+% ОСНОВНЫЕ ПАКЕТЫ
+\usepackage{amsmath,amsthm,amscd,eucal,upref,cite,calc,graphicx,animate,movie15}
+\usepackage{tabularx,hhline,longtable,enumerate,comment,cmap,xspace,makeidx}
+\usepackage[figuresright]{rotating}
+\usepackage{multirow}
+\usepackage{etoolbox}
+\usepackage{subcaption}
+\usepackage{pb-diagram}
+\usepackage{adjustbox}
+\usepackage{amssymb}
+\usepackage[TS1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+%\usepackage{fontspec}
+\usepackage{wrapfig}
+\usepackage[english,russian]{babel}
+\usepackage{setspace}
+%\usepackage{caption} 
+%\captionsetup[table]{skip=10pt}
+
+% ОБЩИЕ НАСТРОЙКИ ТЕКСТА
+\tolerance=10000
+\parindent 1.3em
+\hfuzz=2.3pt
+\interfootnotelinepenalty=10000  % максимально умещать сноски на 1 странице
+\usepackage[papersize={165mm,235mm},marginparsep=8pt,marginparwidth=15mm,%
+            left=17mm,textwidth=135mm,nohead,top=15mm,bottom=20mm]{geometry}   %,showframe
+\definecolor{lightYellow}{RGB}{255, 250, 205}
+\definecolor{lightRed}{RGB}{255, 182, 193}
+\definecolor{ColaRed}{RGB}{246, 36, 34}
+\definecolor{darkred}{RGB}{150,0,0} % используется для footrule, links, подписи под фотками, шапкм таблицы, section
+\definecolor{lightGreen}{RGB}{127, 255, 212}
+\definecolor{darkGreen}{RGB}{0, 115, 54}  % subsection
+\definecolor{dkgreen}{rgb}{0,0.8,0}
+\definecolor{lightBlue}{RGB}{173, 216, 230}
+\definecolor{deepblue}{RGB}{20,27,77} % ключевые слова в листингах программ и жирный шрифт в тексте (\textbf), subsubsection
+\definecolor{deepskyblue}{RGB}{20,27,77} %{rgb}{0.161,0.320,0.424}  % используется в тексте сноски и упражнений
+\definecolor{gray}{rgb}{0.5,0.5,0.5}   % в листингах - нумерация
+\definecolor{lightgray}{rgb}{0.2,0.2,0.2}  % в листингах - рамка
+\definecolor{mauve}{RGB}{203,104,67}   % цвет комментариев на полях
+\renewcommand{\textbf}[1]{\textcolor{deepblue}{\bfseries\slshape #1}}
+
+
+% ОФОРМЛЕНИЕ СОДЕРЖАНИЯ/ОГЛАВЛЕНИЯ, ЗАГОЛОВКОВ РАЗДЕЛОВ И ГЛАВ
+\usepackage{shorttoc,tocloft,titlesec,blindtext}
+\titleformat{\chapter}[block]{}{}{}{\quad\hfill\Large\bfseries\sffamily\MakeUppercase}%
+[\vspace{-20pt}\textcolor{darkred}{\hrule}\vspace{10mm}\thispagestyle{empty}]   % используется только для ненумерованных и литературы
+\titleformat{\section}{\color{darkred}\Large\bfseries\sffamily}{\thesection}{5pt}{\color{darkred}\Large\bfseries}
+\titleformat{\subsection}{\color{darkGreen}\large\bfseries\sffamily}{\thesubsection}{5pt}{\color{darkGreen}\large\bfseries}
+\titleformat{\subsubsection}{\color{deepblue}\large\bfseries\sffamily}{\thesubsubsection}{5pt}{\color{deepblue}\large\bfseries}
+% Настройка вертикальных и горизонтальных отступов
+\titlespacing{\chapter}{-10pt}{0pt}{*3}
+\titlespacing{\section}{0pt}{*4}{*2}
+\titlespacing{\subsection}{0pt}{*4}{*1}
+\cftsetindents{chapter}{0em}{4.5em} % отступ Главы и ее названия от края содержания
+\renewcommand{\cftchappresnum}{Глава\ }
+\renewcommand{\cftdot}{}
+
+% определение глав с нумерацией
+\usepackage{ifmtarg}
+\makeatletter
+\newcommand{\isnotempty}[3]{%  если #1 не пуст, то #2, иначе #3
+  \@ifnotmtarg{#1}{#2}{#3}}
+\makeatother
+\newcommand{\newchapter}[2][]{     % допускает необязательный параметр, куда помещается вторая часть названия
+\clearpage
+%\ifodd\value{page}\else\quad\clearpage\fi
+\refstepcounter{chapter}
+\setcounter{section}{0}
+\setcounter{upr}{0}
+\setcounter{footnote}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setcounter{thrm}{0}
+\setcounter{thmm}{0}
+\setcounter{lem}{0}
+\setcounter{sled}{0}
+\phantomsection
+\addcontentsline{toc}{chapter}{Глава\ \thechapter.\ #2\ #1}
+\vbox{
+\begin{flushright}
+{\Large\bfseries\sffamily ГЛАВА\ \thechapter}
+\vspace{5pt}
+\textcolor{darkred}{\hrule}
+\vspace{10pt}
+{\Huge\bfseries\sffamily #2\isnotempty{#1}{\\[12pt]#1}{}}
+\vspace{10mm}
+\end{flushright}}
+\chaptermark{#2\ #1}
+\thispagestyle{empty}
+}
+
+% определение глав без нумерацией
+\newcommand{\nochapter}[1]{
+\clearpage
+\ifodd\value{page}\else\quad\clearpage\fi
+\phantomsection
+\addcontentsline{toc}{chapter}{#1}
+\begin{flushright}
+{\Large\bfseries\sffamily\MakeUppercase{#1}}
+\vspace{5pt}
+\textcolor{darkred}{\hrule}
+\vspace{10mm}
+\end{flushright}
+\markboth{\sffamily #1}{\sffamily #1}
+\thispagestyle{empty}
+}
+
+% определение нумерованных приложений
+\newcounter{appendix}\setcounter{appendix}{0}
+\newcommand{\theapp}{\Alph{appendix}}   % нумерация приложений буквами
+\newcommand{\newappendix}[2][]{
+\clearpage
+\ifodd\value{page}\else\quad\clearpage\fi
+\refstepcounter{appendix}
+\setcounter{footnote}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setcounter{thrm}{0}
+\setcounter{thmm}{0}
+\setcounter{lem}{0}
+\setcounter{sled}{0}
+\renewcommand{\thefigure}{\theapp.\arabic{figure}}
+\renewcommand{\thetable}{\theapp.\arabic{table}}
+\phantomsection
+\addcontentsline{toc}{chapter}{Приложение\ \theapp.\ #2\ #1}
+\vbox{
+\begin{flushright}
+{\Large\bfseries\sffamily ПРИЛОЖЕНИЕ\ \theapp}
+\vspace{5pt}
+\textcolor{darkred}{\hrule}
+\vspace{10pt}
+{\Huge\bfseries\sffamily #2 \\[12pt] #1}
+\vspace{10mm}
+\end{flushright}}
+\markboth{\sffamily Приложение\ \theapp.\ #2\ #1}{\sffamily Приложение\ \theapp.\ #2\ #1}
+\thispagestyle{empty}
+}
+
+
+
+% ОФОРМЛЕНИЕ КОЛОНТИТУЛОВ, СНОСОК, НОМЕРОВ СТРАНИЦ
+\usepackage{fancyhdr,footmisc}
+\pagestyle{fancy}  % основной стиль для колонтитулов
+\fancyhead{} % очистим хидер на всякий случай
+\fancyfoot{} % очистим футер на всякий случай
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\chaptername\ \thechapter.\ #1}{}} % колонтитулы глав
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\thesection.\ #1}}                % колонтитулы секций
+\renewcommand{\cftmarktoc}[1]{\markboth{\sffamily Содержание}{\sffamily Содержание}} % колонтитулы содержания
+\renewcommand{\footrulewidth}{0.5pt} % толщина отделяющей полоски снизу
+\renewcommand{\headrulewidth}{0pt}   % толщина отделяющей полоски сверху
+%\fancyhead[LO]{текст-слева-нечетные} 
+\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
+\fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
+\renewcommand{\thepage}{\sffamily\arabic{page}}                                % шрифт номера страницы
+\makeatletter
+\patchcmd{\footrule}
+  {\if@fancyplain}
+  {\color{darkred}\if@fancyplain}        % цвет отделяющей полоски футера
+  {}
+  {}
+%\def\footnotelayout{\color{deepblue}} % цвет текста сноски
+\makeatother
+%\renewcommand{\thefootnote}{\textcolor{deepblue}{\arabic{footnote}}}   % цвет номера сноски
+
+
+% ОФОРМЛЕНИЕ ССЫЛОК
+\usepackage[unicode,colorlinks=true,linkcolor=deepskyblue,filecolor=blue,urlcolor=darkred,citecolor=darkred,pdfauthor={Dr.(rus) Nikolai Kazimirov},pdftitle={250 Lecons de Savvateev},bookmarks=true]{hyperref}
+%\usepackage[unicode,colorlinks=true,linktoc=none,linkcolor=darkred,urlcolor=black,citecolor=darkred,pdfauthor={Dr.(rus) Nikolay Kasimirow},pdftitle={Les Archetypes de Mathematique},bookmarks=true]{hyperref}   % ДЛЯ ПЕЧАТИ
+\usepackage{bookmark}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+% ссылка на архетип (номер страницы) для писка архетипов
+\newcommand{\addref}[2][]{
+\isnotempty{#1}{\reversemarginpar}{\normalmarginpar}
+\marginpar[\begin{flushright} #2\end{flushright}]{\begin{flushleft}\quad #2\end{flushleft}}
+\normalmarginpar
+}
+
+
+
+% ПАКЕТЫ ДЛЯ ПОСТРОЕНИЯ ГРАФОВ
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,mindmap,trees,shapes.geometric,matrix}
+%\usetikzlibrary{graphdrawing}
+\usetikzlibrary{graphs}
+\usepackage{forest}
+% настройки изображения деревьев
+\forestset{%
+  gappy tree/.style={
+    for tree={
+	   l=0,
+%      circle,
+%      draw,
+%      s sep'+=1pt,
+%      fit=band,
+    },
+  },
+}
+
+
+% ОФОРМЛЕНИЕ ТЕОРЕМ, УПРАЖНЕНИЙ И БОКОВЫХ КОММЕНТАРИЕВ
+\newtheoremstyle{mythm}{2ex}{1ex}{\itshape}{}{\bfseries}{.}{1ex}{}
+\theoremstyle{mythm}
+\newtheorem{thrm}{Теорема}[chapter]
+\newtheorem{thmm}{Метатеорема}[chapter]
+\newtheorem{lem}{Лемма}[chapter]
+\newtheorem{sled}{Следствие}[chapter]
+\newenvironment{teo}[1]{\renewcommand{\thethrm}{#1}\begin{thrm}}{\end{thrm}}
+\newenvironment{leo}[1]{\renewcommand{\thelem}{#1}\begin{lem}}{\end{lem}}
+\newtheoremstyle{mydef}{2ex}{1ex}{\upshape}{}{\bfseries}{.}{1ex}{}
+\theoremstyle{mydef}
+\newcommand{\pf}{\begin{proof}}
+\newcommand{\epf}{\end{proof}}
+\renewcommand{\proofname}{\itshape }
+%\renewcommand{\qedsymbol}{}        % удаление символа конца доказательства
+\newcounter{upr}\setcounter{upr}{0}
+\numberwithin{upr}{chapter}
+%\marginparwidth=60pt
+\newcommand{\stirlset}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}  % числа Стирлинга для подмножеств
+\newcommand{\stirlcycl}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}   % числа Стирлинга для циклов
+% Команда для создания упражнений на полях книги
+
+\newcommand{\addupr}[1][]{\refstepcounter{upr}\marginpar{
+\ifodd\value{page}
+\textcolor{deepskyblue}{\vrule}\;\begin{flushleft}\footnotesize\em \textcolor{deepskyblue}{\underline{Упр. \arabic{chapter}.\arabic{upr}.}\isnotempty{#1}{\newline #1}{}}\end{flushleft}
+\else
+\begin{flushright}\footnotesize\em \textcolor{deepskyblue}{\underline{Упр. \arabic{chapter}.\arabic{upr}.}\isnotempty{#1}{\\ #1}{}}\end{flushright}\;\textcolor{deepskyblue}{\vrule}
+\fi
+}}
+
+\let\oldbaselinestretch=\baselinestretch
+\setcounter{totalnumber}{10}
+\setcounter{topnumber}{10}
+\setlength{\intextsep}{0pt}% used only by wrapfig
+\newcommand{\adduprL}[1][]{
+\refstepcounter{upr}
+\begin{wrapfigure}{l}{15mm}
+%\vspace*{-12pt}
+\hspace*{-5mm}
+\textcolor{deepskyblue}{
+\begin{minipage}{20mm}\setstretch{0.7}
+\begin{flushright}
+{\footnotesize\em Упражнение \underline{\arabic{chapter}.\arabic{upr}.}\isnotempty{#1}{\\ #1}{}}
+\end{flushright}
+\end{minipage}\;\vrule\;\;}
+%\vspace*{-12pt}
+\end{wrapfigure}\leavevmode\noindent
+}
+\newcommand{\adduprR}[1][]{
+\refstepcounter{upr}
+\begin{wrapfigure}{r}{20mm}
+%\vspace*{-12pt}
+\textcolor{deepskyblue}{
+\vrule\;\begin{minipage}{20mm}\setstretch{0.7}
+\begin{flushleft}
+{\footnotesize\em Упражнение \underline{\arabic{chapter}.\arabic{upr}.}\isnotempty{#1}{\\ #1}{}}
+\end{flushleft}
+\end{minipage}}
+%\vspace*{-12pt}
+\end{wrapfigure}\leavevmode
+}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+\newcommand{\addcommL}[2][]{
+\begin{wrapfigure}{l}{10mm}
+%\vspace*{-12pt}
+\hspace*{-10mm}
+\textcolor{mauve}{
+\begin{minipage}{20mm}\setstretch{0.7}
+\begin{flushright}
+{\footnotesize\em #2}
+\end{flushright}
+\end{minipage}\;\vrule\;\;}
+%\vspace*{-12pt}
+\end{wrapfigure}\leavevmode\noindent
+}
+\newcommand{\addcommR}[2][]{
+\begin{wrapfigure}{r}{20mm}
+%\vspace*{-12pt}
+\textcolor{mauve}{
+\vrule\;\begin{minipage}[#1]{20mm}\setstretch{0.7}
+\begin{flushleft}
+{\footnotesize\em #2}
+\end{flushleft}
+\end{minipage}}
+%\vspace*{-12pt}
+\end{wrapfigure}\leavevmode
+}
+
+\newcommand{\sep}[1]{\marginpar{$\mathnormal{#1}$ $\mathfrak{min}$}}
+
+
+% ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
+\newcounter{vrz}\setcounter{vrz}{0}
+\newcommand{\vrezka}[2][]{\refstepcounter{vrz}
+{\sffamily
+\noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}\nopagebreak
+
+\noindent\textbf{Аннотация%~\arabic{vrz}
+}. #1\nopagebreak
+
+#2 }\nopagebreak
+ 
+\noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}}
+\newcommand{\foto}[3]{\marginpar{
+\ifodd\value{page}
+\begin{flushleft}\includegraphics[scale=#2]{#1} \textcolor{darkred}{\footnotesize\em #3}\end{flushleft}
+\else
+\begin{flushright}\includegraphics[scale=#2]{#1} \textcolor{darkred}{\footnotesize\em #3}\end{flushright}
+\fi
+}}
+\newcommand{\nb}{}   % картинка на полях Nota Bene
+
+
+\newcommand{\fotoL}[3]{
+\begin{wrapfigure}{L}{20mm}
+\includegraphics[scale=#2]{#1}
+\textcolor{darkred}{\footnotesize\em #3}
+\end{wrapfigure}
+}
+\newcommand{\fotoR}[3]{
+\begin{wrapfigure}{R}{20mm}
+\begin{center}
+\includegraphics[scale=#2]{#1}
+\textcolor{darkred}{\footnotesize\em #3}
+\end{center}
+\end{wrapfigure}
+}
+
+
+% СОКРАЩЕНИЯ И НОВЫЕ ОПЕРАТОРЫ И СИМВОЛЫ
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda}
+\newcommand{\ka}{\varkappa}
+\newcommand{\si}{\sigma}
+\newcommand{\Si}{\Sigma}
+\newcommand{\ph}{\varphi}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\De}{\Delta}
+\newcommand{\A}{\mathbb A}
+\newcommand{\e}{\mathsf e}
+\newcommand{\F}{\mathfrak F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\TP}{\mathbb{TP}}
+\newcommand{\W}{\mathfrak W}
+\newcommand{\B}{\mathfrak B}
+\newcommand{\Rec}{\mathfrak R}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Dcal}{\mathcal D}
+\newcommand{\Gcal}{\mathcal G}
+\newcommand{\Fcal}{\mathcal F}
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\Lcal}{\mathcal L}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\Ucal}{\mathcal U}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Bcal}{\mathcal B}
+\renewcommand{\U}{\mathfrak U}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\QP}{\mathbb{QP}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\HR}{\mathbb H\hspace{-0.38em}\mathbb R}
+\renewcommand{\L}{\mathbb L}
+\newcommand{\Sur}{\mathsf{No}}
+\renewcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\Harm}{\mathcal H}
+\newcommand{\Hcal}{\mathcal H}
+\renewcommand{\O}{\mathbb O}
+\newcommand{\cgot}{\mathfrak c}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\renewcommand{\f}{\mathfrak f}
+\newcommand{\g}{\mathfrak g}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\lep}{\preccurlyeq}
+\newcommand{\gep}{\succcurlyeq}
+\newcommand{\txir}[1][r]{\Tilde{\xi}^{(#1)}}
+\newcommand{\xir}[1][r]{\xi^{(#1)}}
+\newcommand{\Sr}[1][r]{\zeta^{(#1)}}
+\newcommand{\tSr}[1][r]{\Tilde{\zeta}^{(#1)}}
+\newcommand{\pot}[1]{\left\lceil#1\right\rceil}
+\renewcommand{\bar}[1]{\overline{#1}}
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\step}{\mathrm{st}}
+\newcommand{\Spec}{\mathrm{Spec}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\supp}{\mathop{\mathrm{supp}}}
+\newcommand{\dddoteq}{\raisebox{-.1em}{\textbf{=}}\nolinebreak\hspace{-.85em}\raisebox{.4em}{...}}
+\newcommand{\Code}{\mathop{\mathrm{Code}}\nolimits}
+\newcommand{\cov}{\mathop{\mathrm{cov}}}
+\newcommand{\upuparrow}{\mathop{\uparrow\uparrow}}
+\newcommand{\Trans}{\mathop{\mathrm{Trans}}}
+\newcommand{\Ord}{\mathop{\mathrm{Ord}}}
+\renewcommand{\atop}[2]{\genfrac{}{}{0pt}{1}{#1}{#2}}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\AC}{\ifmmode \mathsf{AC}\else ${\mathsf{AC}}$\fi\xspace}
+\newcommand{\DC}{\ifmmode \mathsf{DC}\else ${\mathsf{DC}}$\fi\xspace}
+\newcommand{\AD}{\ifmmode \mathsf{AD}\else ${\mathsf{AD}}$\fi\xspace}
+\newcommand{\SI}{\ifmmode \mathsf{SI}\else ${\mathsf{SI}}$\fi\xspace}
+\newcommand{\ZL}{\ifmmode \mathsf{ZL}\else ${\mathsf{ZL}}$\fi\xspace}
+\newcommand{\HMP}{\ifmmode \mathsf{HMP}\else ${\mathsf{HMP}}$\fi\xspace}
+\newcommand{\ZT}{\ifmmode \mathsf{ZT}\else ${\mathsf{ZT}}$\fi\xspace}
+\newcommand{\CH}{\ifmmode \mathsf{CH}\else ${\mathsf{CH}}$\fi\xspace}
+\newcommand{\GB}{\ifmmode \mathsf{GB}\else ${\mathsf{GB}}$\fi\xspace}
+\newcommand{\GC}{\ifmmode \mathsf{GC}\else ${\mathsf{GC}}$\fi\xspace}
+\newcommand{\ZF}{\ifmmode \mathsf{ZF}\else ${\mathsf{ZF}}$\fi\xspace}
+\newcommand{\ZFC}{\ifmmode \mathsf{ZFC}\else ${\mathsf{ZFC}}$\fi\xspace}
+\newcommand{\ZFD}{\ifmmode \mathsf{ZFD}\else ${\mathsf{ZFD}}$\fi\xspace}
+\newcommand{\NGB}{\ifmmode \mathsf{NGB}\else ${\mathsf{NGB}}$\fi\xspace}
+\newcommand{\GCH}{\ifmmode \mathsf{GCH}\else ${\mathsf{GCH}}$\fi\xspace}
+\newcommand{\Rel}{{\mathsf{R}}}
+\newcommand{\Srel}{{\mathsf{S}}}
+\newcommand{\Fsf}{{\mathsf{F}}}
+\newcommand{\Ep}{{\mathsf{\varepsilon}}}
+\newcommand{\Sb}{{\mathsf{S}}}
+\newcommand{\Aut}{{\mathsf{Aut}}}
+\newcommand{\On}{\mathop{\mathrm{On}}}
+\newcommand{\cf}{\mathop{\mathrm{cf}}}
+\newcommand{\dom}{\mathop{\mathrm{dom}}}
+\newcommand{\Ker}{\mathop{\mathrm{Ker}}}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\newcommand{\ran}{\mathop{\mathrm{ran}}}
+\newcommand{\Con}{\mathop{\mathrm{Con}}}
+\newcommand{\Th}{\mathop{\mathrm{Th}}}
+\newcommand{\Exp}{\mathop{\mathrm{Exp}}}
+\newcommand{\ssup}{\mathop{\mathrm{ssup}}}
+\newcommand{\Card}{\mathop{\mathrm{Card}}}
+\newcommand{\SO}{\mathop{\mathrm{SO}}}
+\newcommand{\GL}{\mathop{\mathrm{GL}}}
+\newcommand{\Galois}{{\mathsf{G}}}
+\newcommand{\Shift}{{\mathsf{Shift}}}
+\newcommand{\PGL}{\mathop{\mathrm{PGL}}}
+\newcommand{\PSL}{\mathop{\mathrm{PSL}}}
+\newcommand{\SL}{\mathop{\mathrm{SL}}}
+\newcommand{\SU}{\mathop{\mathrm{SU}}}
+\newcommand{\Python}{\hbox{\textsf{Python}}}
+\newcommand{\pr}{\mathrm{pr}}
+\renewcommand{\Pr}{\mathrm{Pr}}
+\newcommand{\In}{\mathop{\mathrm{In}}}
+\renewcommand{\exp}{\mathop{\mathrm{exp}}}
+\renewcommand{\Exp}{\mathop{\mathrm{Exp}}}
+\newcommand{\Res}{\mathop{\mathrm{Res}}}
+\newcommand{\Numcode}[1]{\ulcorner #1\urcorner}
+\renewcommand{\simeq}{\cong}
+\newcommand{\esssup}{\mathrm{ess } \sup}
+%\renewcommand{\bar}[1]{\overline{#1}}
+\newcommand{\D}{\Variance}
+\renewcommand{\P}{\Prob}
+\newcommand{\E}{\mathsf{E}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\rad}{\mathrm{rad}}
+\renewcommand{\S}{\mathbb S}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Prog}{\mathrm{Prog}}
+
+
+% ОФОРМЛЕНИЕ ЛИСТИНГОВ ПРОГРАММ
+\usepackage{listings}
+\lstset{%
+  language=Python,inputencoding=utf8x, extendedchars=true, keepspaces = true,
+  basicstyle=\sffamily\footnotesize,
+%  numbers=left,                   % С какой стороны нумеровать
+%  numberstyle=\tiny\color{gray},     % Стиль который будет использоваться для нумерации строк
+  captionpos=t,
+%  stepnumber=1,                   % Шаг между линиями. Если 1, то будет пронумерована каждая строка 
+  numbersep=5pt,                  
+%  backgroundcolor=color{white},      % Цвет подложки. Вы должны добавить пакет color - usepackage{color}
+%  showspaces=false,               
+  showstringspaces=false,         % не показывать пробелы в строках
+%  showtabs=false,                
+%  frame=single,                    % Добавить рамку
+  frame=tb,
+  rulecolor=\color{lightgray},        % Цвет рамки
+  tabsize=4,                       % Tab - 2 пробела
+  breaklines=true,                 % Автоматический перенос строк
+  breakatwhitespace=true,          % Переносить строки по словам
+%  title=\lstname,                   % Показать название подгружаемого файла
+  columns=fixed,
+  morestring=[s]{"""}{"""},
+  keywordstyle=\sffamily\bfseries\color{deepblue},          % Стиль ключевых слов
+  commentstyle=\sffamily\color{mauve},       % Стиль комментариев
+  stringstyle=\sffamily\color{darkGreen},          % Стиль строк
+  emph={True,False,gudstein,subst_prod,Next},
+  emphstyle=\sffamily\bfseries\color{blue},
+  literate={Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+	{~}{{\textasciitilde}}1
+	{а}{{\selectfont\char224}}1
+	{б}{{\selectfont\char225}}1
+	{в}{{\selectfont\char226}}1
+	{г}{{\selectfont\char227}}1
+	{д}{{\selectfont\char228}}1
+	{е}{{\selectfont\char229}}1
+	{ё}{{\"e}}1
+	{ж}{{\selectfont\char230}}1
+	{з}{{\selectfont\char231}}1
+	{и}{{\selectfont\char232}}1
+	{й}{{\selectfont\char233}}1
+	{к}{{\selectfont\char234}}1
+	{л}{{\selectfont\char235}}1
+	{м}{{\selectfont\char236}}1
+	{н}{{\selectfont\char237}}1
+	{о}{{\selectfont\char238}}1
+	{п}{{\selectfont\char239}}1
+	{р}{{\selectfont\char240}}1
+	{с}{{\selectfont\char241}}1
+	{т}{{\selectfont\char242}}1
+	{у}{{\selectfont\char243}}1
+	{ф}{{\selectfont\char244}}1
+	{х}{{\selectfont\char245}}1
+	{ц}{{\selectfont\char246}}1
+	{ч}{{\selectfont\char247}}1
+	{ш}{{\selectfont\char248}}1
+	{щ}{{\selectfont\char249}}1
+	{ъ}{{\selectfont\char250}}1
+	{ы}{{\selectfont\char251}}1
+	{ь}{{\selectfont\char252}}1
+	{э}{{\selectfont\char253}}1
+	{ю}{{\selectfont\char254}}1
+	{я}{{\selectfont\char255}}1
+	{А}{{\selectfont\char192}}1
+	{Б}{{\selectfont\char193}}1
+	{В}{{\selectfont\char194}}1
+	{Г}{{\selectfont\char195}}1
+	{Д}{{\selectfont\char196}}1
+	{Е}{{\selectfont\char197}}1
+	{Ё}{{\"E}}1
+	{Ж}{{\selectfont\char198}}1
+	{З}{{\selectfont\char199}}1
+	{И}{{\selectfont\char200}}1
+	{Й}{{\selectfont\char201}}1
+	{К}{{\selectfont\char202}}1
+	{Л}{{\selectfont\char203}}1
+	{М}{{\selectfont\char204}}1
+	{Н}{{\selectfont\char205}}1
+	{О}{{\selectfont\char206}}1
+	{П}{{\selectfont\char207}}1
+	{Р}{{\selectfont\char208}}1
+	{С}{{\selectfont\char209}}1
+	{Т}{{\selectfont\char210}}1
+	{У}{{\selectfont\char211}}1
+	{Ф}{{\selectfont\char212}}1
+	{Х}{{\selectfont\char213}}1
+	{Ц}{{\selectfont\char214}}1
+	{Ч}{{\selectfont\char215}}1
+	{Ш}{{\selectfont\char216}}1
+	{Щ}{{\selectfont\char217}}1
+	{Ъ}{{\selectfont\char218}}1
+	{Ы}{{\selectfont\char219}}1
+	{Ь}{{\selectfont\char220}}1
+	{Э}{{\selectfont\char221}}1
+	{Ю}{{\selectfont\char222}}1
+	{Я}{{\selectfont\char223}}1
+	{і}{{\selectfont\char105}}1
+	{ї}{{\selectfont\char168}}1
+	{є}{{\selectfont\char185}}1
+	{ґ}{{\selectfont\char160}}1
+	{І}{{\selectfont\char73}}1
+	{Ї}{{\selectfont\char136}}1
+	{Є}{{\selectfont\char153}}1
+	{Ґ}{{\selectfont\char128}}1
+}
+%\renewcommand{\lstlistingname}{Листинг на \Python}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   ТЕКСТ   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\input{titile}
+
+\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
+
+\shorttableofcontents{Оглавление}{1}
+\markboth{}{}
+
+
+
+\input{visual}
+
+%\input{literature}
+
+
+
+\label{ENDPAGE}
+%\newpage
+%\begin{center}
+%\includegraphics[scale=0.40]{books.jpg}
+%\end{center}
+
+\clearpage
+\tableofcontents
+
+
+\end{document}
+ 
