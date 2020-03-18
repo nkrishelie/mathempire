@@ -1051,294 +1051,38 @@ $S_2$     & $S_1$     & $R$ & $\id$ \\
 \item Разбираем движения, попутно доказывая лемму <<о гвоздях>>.
 \item Пусть на плоскости три точки, не лежащие на одной прямой, остаются неподвижными при движении. Вывод: это $\id$.
 \item Пусть на плоскости неподвижны 2 точки и вся прямая, проходящая через них, остальные точки подвижны. Тогда это симметрия относительно данной прямой.
-\item Пусть неподвижна лишь одна точка. Тако возможно лишь при вращении вокруг этой точки на угол, не кратный полному обороту.
-\item Пусть вообще нет неподвижных точек. Берем любую точку, смотрим, куда она переходит, применяем сдвиг (параллельный перенос). Полученное преобразование имеет как минимум 1 неподвижную точку, а значит, является либо $\id$, либо симметрией, либо поворотом. Следовательно, исходное движение: либо сдвиг, либо смещенная симметрия, либо поворот со смещением.
-\item Таблица композиций
-\item 
+\item Пусть неподвижна лишь одна точка. Такое возможно лишь при вращении вокруг этой точки на угол, не кратный полному обороту.
+\item Пусть вообще нет неподвижных точек. Берем любую точку, смотрим, куда она переходит, применяем сдвиг (параллельный перенос). Оставшееся преобразование имеет как минимум 1 неподвижную точку, а значит, является либо $\id$, либо симметрией, либо поворотом. Интересно, что поворот в данном случае можно исключить, т.к. композиция сдвига и поворота есть просто поворот, а значит, в исходном преобразовании была как минимум одна неподвижная точка. Следовательно, исходное движение есть либо сдвиг, либо смещенная симметрия (композиция сдвига и симметрии).
+\item Таким образом, движение плоскости можно рассматривать как комбинацию параллельного переноса (в частности, на нулевой вектор), поворота (в частности, на нулевой угол) и симметрии относительно произвольной прямой.
+\item А произвольное движение (без разложения его на компоненты) при этом есть движение одного из следующих классов:
+\begin{enumerate}[a)]
+\item класс параллельных переносов (на произвольный вектор), который мы обозначим $\rightrightarrows$;
+\item класс поворотов относительно произвольного центра, который мы обозначим $\circlearrowleft$;
+\item класс скользящих симметрий (сдвиг на произвольный вектор с последующей симметрией относительно оси данного вектора), который мы обозначим $\leftharpoonup\leftharpoondown$.
+\end{enumerate}
+\item Таблица композиций для таких классов выглядит следующим образом:
+\begin{center}
+\begin{tabular}{c|ccc}
+ & $\rightrightarrows$ & $\circlearrowleft$ &  $\leftharpoonup\leftharpoondown$ \\ \hline
+$\rightrightarrows$ & $\rightrightarrows$ &  $\circlearrowleft$ &  $\leftharpoonup\leftharpoondown$  \\ 
+$\circlearrowleft$ & $\circlearrowleft$ & $\rightrightarrows$ или $\circlearrowleft$ & $\leftharpoonup\leftharpoondown$  \\ 
+$\leftharpoonup\leftharpoondown$ & $\leftharpoonup\leftharpoondown$ & $\leftharpoonup\leftharpoondown$ & $\rightrightarrows$ или $\circlearrowleft$  \\ 
+\end{tabular}
+\end{center}
+\item Аналогично одномерным случаям (прямая и окружность) можно выбирать различные базовые преобразования для построения с их помощью всех движений. 
+\item \textbf{Теорема Шаля}. Всякое движение есть композиция не более трех симметрий (относительно разных и, вообще говоря, не обязательно параллельных осей).
 \item Сдвиг можно представить как композицию двух симметрий (относительно параллельных осей).
 \item Поворот можно представить как композицию двух симметрий (относительно пересекающихся осей).
-\item Поэтому все движения плоскости можно расматривать как одно- и двухкратные симметрии (вообще говоря, с различными осями).
+\item Скользящую симметрию можно представить как композицию трех симметрий (две на сдвиг и одна собственно симметрия).
 \end{enumerate}
+
+
 \subsection{Задачи}
-
-
-
-
-\section{Теорема Шаля}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
+\begin{enumerate}
+\item Показать, что композиция поворотов (относительно разных центров) есть либо сдвиг, либо поворот (вычислить его центр).
+\item Показать, что композиция сдвига и поворота есть поворот.
 \end{enumerate}
-\subsection{Задачи}
 
-
-
-
-\section{Таблица движений}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-
-\newchapter{Исчисление остатков}
-
-
-\section{Таблица сложения остатков}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-
-\section{Умножение остатков. Поле}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Малая теорема Ферма}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Многочлены}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\newchapter{Основная теорема арифметики и ее следствия}
-
-
-
-\section{Корни и разрешимость уравнений}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-\section{Рациональные дроби}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Цепные дроби}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Расширение поля рациональных чисел}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\newchapter{Комплексные числа и Гаусс}
-
-\section{Комплексные числа}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Реализация движений с помощью комплексных чисел}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-\section{Гомотетии прямой и плоскости}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
-
-
-
-
-\section{Числа Гаусса}
-
-\subsection{Конспект}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\end{enumerate}
-\subsection{Задачи}
 
 
 
