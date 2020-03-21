@@ -207,7 +207,7 @@
 % ОФОРМЛЕНИЕ ТЕОРЕМ, УПРАЖНЕНИЙ И БОКОВЫХ КОММЕНТАРИЕВ
 \newtheoremstyle{mythm}{2ex}{1ex}{\itshape}{}{\bfseries}{.}{1ex}{}
 \theoremstyle{mythm}
-\newtheorem{thrm}{Теорема}[chapter]
+\newtheorem{thrm}{\textbf{Теорема}}[chapter]\renewcommand{\thethrm}{}
 \newtheorem{thmm}{Метатеорема}[chapter]
 \newtheorem{lem}{Лемма}[chapter]
 \newtheorem{sled}{Следствие}[chapter]
@@ -475,6 +475,8 @@
 \newcommand{\rank}{\mathrm{rank}}
 \newcommand{\Prog}{\mathrm{Prog}}
 \renewcommand{\gcd}{\mbox{НОД}}
+\renewcommand{\nok}{\mbox{НОК}}
+\newcommand{\iif}{\quad\;\Longleftrightarrow\quad\;}
 
 % ОФОРМЛЕНИЕ ЛИСТИНГОВ ПРОГРАММ
 \usepackage{listings}
@@ -618,8 +620,8 @@
 %\includegraphics[scale=0.40]{books.jpg}
 %\end{center}
 
-\clearpage
-\tableofcontents
+%\clearpage
+%\tableofcontents
 
 
 \end{document}
