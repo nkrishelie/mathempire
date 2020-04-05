@@ -21,6 +21,9 @@
 \usepackage{setspace}
 %\usepackage{caption} 
 %\captionsetup[table]{skip=10pt}
+\usepackage[shortlabels]{enumitem}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=\parindent, itemsep=2pt+4pt-5pt}
+\setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
 \tolerance=10000
@@ -612,6 +615,7 @@
 
 \input{algebra}
 
+\input{extention}
 
 
 \label{ENDPAGE}
