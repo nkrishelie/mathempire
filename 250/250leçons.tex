@@ -22,7 +22,7 @@
 %\usepackage{caption} 
 %\captionsetup[table]{skip=10pt}
 \usepackage[shortlabels]{enumitem}
-\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=\parindent, itemsep=2pt+4pt-5pt}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=0pt, itemsep=2pt+4pt-3pt}
 \setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
@@ -30,8 +30,9 @@
 \parindent 1.3em
 \hfuzz=2.3pt
 \interfootnotelinepenalty=10000  % максимально умещать сноски на 1 странице
-\usepackage[papersize={165mm,235mm},marginparsep=8pt,marginparwidth=15mm,%
-            left=17mm,textwidth=135mm,nohead,top=15mm,bottom=20mm]{geometry}   %,showframe
+\usepackage[papersize={165mm,235mm},centering, %marginparsep=8pt,marginparwidth=15mm,%
+           % left=10mm,
+            textwidth=135mm,nohead,top=15mm,bottom=20mm]{geometry}   %,showframe
 \definecolor{lightYellow}{RGB}{255, 250, 205}
 \definecolor{lightRed}{RGB}{255, 182, 193}
 \definecolor{ColaRed}{RGB}{246, 36, 34}
@@ -98,7 +99,6 @@
 \thispagestyle{empty}
 }
 
-%\renewcommand{\chapter}[1]{\newchapter{#1}}
 
 % определение глав без нумерацией
 \newcommand{\nochapter}[1]{
@@ -307,10 +307,11 @@
 \newcounter{vrz}\setcounter{vrz}{0}
 \newcommand{\vrezka}[2][]{\refstepcounter{vrz}
 {\sffamily
+\noindent\textbf{Аннотация%~\arabic{vrz}
+}.
 \noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}\nopagebreak
 
-\noindent\textbf{Аннотация%~\arabic{vrz}
-}. #1\nopagebreak
+ #1\nopagebreak
 
 #2 }\nopagebreak
  
