@@ -302,6 +302,17 @@
 
 \newcommand{\sep}[1]{\marginpar{$\mathnormal{#1}$ $\mathfrak{min}$}}
 
+\newcounter{lektion}\setcounter{lektion}{0}
+\newcommand{\lektion}{\refstepcounter{lektion}
+\marginpar{  %\colorbox{darkred}{\textcolor{white}{\Huge\arabic{lektion}}}}
+\fcolorbox{darkred}{darkred}{%
+\begin{minipage}{5mm}
+\begin{center}
+\textcolor{white}{\Huge\arabic{lektion}}
+\end{center}
+\end{minipage}}
+}
+}
 
 % ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
 \newcounter{vrz}\setcounter{vrz}{0}
@@ -363,7 +374,7 @@
 \newcommand{\T}{\mathbb T}
 \newcommand{\TP}{\mathbb{TP}}
 \newcommand{\W}{\mathfrak W}
-\newcommand{\B}{\mathfrak B}
+\newcommand{\B}{\mathbb B}
 \newcommand{\Rec}{\mathfrak R}
 \newcommand{\Pcal}{\mathcal P}
 \newcommand{\Dcal}{\mathcal D}
