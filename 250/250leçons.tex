@@ -22,7 +22,7 @@
 %\usepackage{caption} 
 %\captionsetup[table]{skip=10pt}
 \usepackage[shortlabels]{enumitem}
-\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=0pt, itemsep=2pt+4pt-3pt}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=0pt, itemsep=2pt+4pt-3pt, listparindent=\parindent}
 \setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
@@ -212,7 +212,7 @@
 % ОФОРМЛЕНИЕ ТЕОРЕМ, УПРАЖНЕНИЙ И БОКОВЫХ КОММЕНТАРИЕВ
 \newtheoremstyle{mythm}{2ex}{1ex}{\itshape}{}{\bfseries}{.}{1ex}{}
 \theoremstyle{mythm}
-\newtheorem{thrm}{\textbf{Теорема}}[chapter]\renewcommand{\thethrm}{}
+\newtheorem{thrm}{Теорема}[chapter] %\renewcommand{\thethrm}{}
 \newtheorem{thmm}{Метатеорема}[chapter]
 \newtheorem{lem}{Лемма}[chapter]
 \newtheorem{sled}{Следствие}[chapter]
@@ -455,6 +455,7 @@
 \newcommand{\On}{\mathop{\mathrm{On}}}
 \newcommand{\cf}{\mathop{\mathrm{cf}}}
 \newcommand{\dom}{\mathop{\mathrm{dom}}}
+\newcommand{\content}{\mathop{\mathrm{count}}}
 \newcommand{\Ker}{\mathop{\mathrm{Ker}}}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \newcommand{\ran}{\mathop{\mathrm{ran}}}
