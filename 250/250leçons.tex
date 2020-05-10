@@ -1,7 +1,7 @@
 % НАСТРОЙКИ ДОКУМЕНТА
 \documentclass[11pt]{book}
 % ОСНОВНЫЕ ПАКЕТЫ
-\usepackage{amsmath,amsthm,amscd,eucal,upref,cite,calc,graphicx,animate,movie15}
+\usepackage{amsmath,amsthm,amscd,eucal,upref,cite,calc,graphicx,animate}
 \usepackage{tabularx,hhline,longtable,enumerate,comment,cmap,xspace,makeidx}
 \usepackage[figuresright]{rotating}
 \usepackage{multirow}
@@ -163,7 +163,7 @@
 %\fancyhead[LO]{текст-слева-нечетные} 
 \fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
 \fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
-\renewcommand{\thepage}{\sffamily\arabic{page}}                                % шрифт номера страницы
+\renewcommand{\thepage}{\arabic{page}}                                % шрифт номера страницы
 \makeatletter
 \patchcmd{\footrule}
   {\if@fancyplain}
@@ -609,7 +609,7 @@
 }
 %\renewcommand{\lstlistingname}{Листинг на \Python}
 
-
+\makeindex
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -633,6 +633,8 @@
 
 \input{extention}
 
+
+\printindex
 
 \label{ENDPAGE}
 %\newpage
