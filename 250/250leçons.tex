@@ -617,10 +617,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%\input{titile}
+\input{title}
 
-\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
-\tableofcontents
+%\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
+%\tableofcontents
 
 %\shorttableofcontents{Оглавление}{1}
 %\markboth{}{}
@@ -640,12 +640,89 @@
 
 \printindex
 
-\label{ENDPAGE}
+
+\newappendix{Схемы и таблицы}
+
+\newpage\renewcommand{\arraystretch}{1.8}\renewcommand{\tabcolsep}{1mm}
+\begin{table}[h!]\tiny\sffamily %\fontfamily{iwona}\selectfont
+\caption{Таблица умножения симметрической группы $\Sb_4$}
+\label{SymmetricS4}
+\begin{tabular}{c|ccccccccccc}
+\hline
+\multicolumn{12}{c}{\normalsize\cellcolor{lightGreen} Знакопеременная группа $A_4$} \\ \hline
+\multicolumn{4}{c|}{\normalsize\cellcolor{lightYellow} Четверная группа Клейна} & & & & & & & & \\ \hline\rowcolor{lightGreen}
+\cellcolor{lightYellow}e & \cellcolor{yellow}(12)(34) &\cellcolor{yellow} (13)(24) &\multicolumn{1}{c|}{\cellcolor{yellow} (14)(23)} & (123) & (132) & (124) & (142) & (134) & (143) & (234) & (243) \\ \hline\rowcolor{lightGreen}
+\cellcolor{yellow}(12)(34) &\cellcolor{lightYellow} e &\cellcolor{lightYellow} (14)(23) &\multicolumn{1}{c|}{\cellcolor{lightYellow} (13)(24)} & (243) & (143) & (234) & (134) & (142) & (132) & (124) & (123) \\ \hline\rowcolor{lightGreen}
+\cellcolor{yellow}(13)(24) &\cellcolor{lightYellow} (14)(23) &\cellcolor{lightYellow} e &\multicolumn{1}{c|}{\cellcolor{lightYellow} (12)(34)} & (142) & (234) & (143) & (123) & (243) & (124) & (132) & (134) \\ \hline\rowcolor{lightGreen}
+\cellcolor{yellow}(14)(23) &\cellcolor{lightYellow} (13)(24) &\cellcolor{lightYellow} (12)(34) &\multicolumn{1}{c|}{\cellcolor{lightYellow} e} & (134) & (124) & (132) & (243) & (123) & (234) & (143) & (142) \\ \hline\rowcolor{lightGreen}
+(123) & (134) & (243) & (142) & \cellcolor{lightBlue}(132) & \cellcolor{lightBlue}e & (13)(24) & (143) & (234) & (14)(23) & (12)(34) & (124) \\ \hline\rowcolor{lightGreen}
+(132) & (234) & (124) & (143) & \cellcolor{lightBlue}e & \cellcolor{lightBlue}(123) & (243) & (14)(23) & (12)(34) & (142) & (134) & (13)(24) \\ \hline\rowcolor{lightGreen}
+(124) & (143) & (132) & (234) & (14)(23) & (134) & \cellcolor{lightBlue}(142) & \cellcolor{lightBlue}e & (13)(24) & (243) & (123) & (12)(34) \\ \hline\rowcolor{lightGreen}
+(142) & (243) & (134) & (123) & (234) & (13)(24) & \cellcolor{lightBlue}e & \cellcolor{lightBlue}(124) & (132) & (12)(34) & (14)(23) & (143) \\ \hline\rowcolor{lightGreen}
+(134) & (123) & (142) & (243) & (124) & (14)(23) & (12)(34) & (234) & \cellcolor{lightBlue}(143) & \cellcolor{lightBlue}e & (13)(24) & (132) \\ \hline\rowcolor{lightGreen}
+(143) & (124) & (234) & (132) & (12)(34) & (243) & (123) & (13)(24) & \cellcolor{lightBlue}e & \cellcolor{lightBlue}(134) & (142) & (14)(23) \\ \hline\rowcolor{lightGreen}
+(234) & (132) & (143) & (124) & (13)(24) & (142) & (134) & (12)(34) & (14)(23) & (123) & \cellcolor{lightBlue}(243) & \cellcolor{lightBlue}e \\ \hline\rowcolor{lightGreen}
+(243) & (142) & (123) & (134) & (143) & (12)(34) & (14)(23) & (132) & (124) & (13)(24) & \cellcolor{lightBlue}e & \cellcolor{lightBlue}(234) \\ \hline
+\cellcolor{yellow}(12) &\cellcolor{yellow} (34) &\cellcolor{yellow} (1324) &\cellcolor{yellow} (1423) & (23) & (13) & (24) & (14) & (1342) & (1432) & (1234) & (1243) \\ \hline
+(13) & (1234) & (24) & (1432) & (12) & (23) & (1243) & (1423) & (34) & (14) & (1342) & (1324) \\ \hline
+(14) & (1243) & (1342) & (23) & (1234) & (1324) & (12) & (24) & (13) & (34) & (1423) & (1432) \\ \hline
+(23) & (1342) & (1243) & (14) & (13) & (12) & (1324) & (1432) & (1234) & (1423) & (34) & (24) \\ \hline
+(24) & (1432) & (13) & (1234) & (1423) & (1342) & (14) & (12) & (1324) & (1243) & (23) & (34) \\ \hline
+\cellcolor{yellow}(34) &\cellcolor{yellow} (12) &\cellcolor{yellow} (1423) &\cellcolor{yellow} (1324) & (1243) & (1432) & (1234) & (1342) & (14) & (13) & (24) & (23) \\ \hline
+(1234) & (13) & (1432) & (24) & (1324) & (14) & (1342) & (34) & (1423) & (23) & (1243) & (12) \\ \hline
+(1243) & (14) & (23) & (1342) & (1432) & (34) & (1423) & (13) & (24) & (1324) & (12) & (1234) \\ \hline
+\cellcolor{yellow}(1324) & \cellcolor{yellow}(1423) &\cellcolor{yellow} (12) &\cellcolor{yellow} (34) & (14) & (1234) & (1432) & (23) & (1243) & (24) & (13) & (1342) \\ \hline
+(1342) & (23) & (14) & (1243) & (24) & (1423) & (34) & (1234) & (1432) & (12) & (1324) & (13) \\ \hline
+\cellcolor{yellow}(1423) &\cellcolor{yellow} (1324) &\cellcolor{yellow} (34) &\cellcolor{yellow} (12) & (1342) & (24) & (13) & (1243) & (23) & (1234) & (1432) & (14) \\ \hline
+(1432) & (24) & (1234) & (13) & (34) & (1243) & (23) & (1324) & (12) & (1342) & (14) & (1423) \\ \hline
+\multicolumn{12}{l}{*Здесь \colorbox{lightBlue}{особым фоном} выделены элементы, образующие группу, изоморфную $\Z_3$, поскольку их 3-я степень равна $\e$.}
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]\tiny\sffamily
+\caption{Продолжение таблицы \ref{SymmetricS4}}
+\begin{tabular}{cccccccccccc}
+\hline
+\multicolumn{12}{c}{} \\ \hline
+\multicolumn{12}{c}{} \\ \hline
+\cellcolor{yellow}(12) & (13) & (14) & (23) & (24) &\cellcolor{yellow} (34) & (1234) & (1243) &\cellcolor{yellow} (1324) & (1342) &\cellcolor{yellow} (1423) & (1432) \\ \hline
+\cellcolor{yellow}(34) & (1432) & (1342) & (1243) & (1234) &\cellcolor{yellow} (12) & (24) & (23) &\cellcolor{yellow} (1423) & (14) &\cellcolor{yellow} (1324) & (13) \\ \hline
+\cellcolor{yellow}(1423) & (24) & (1243) & (1342) & (13) &\cellcolor{yellow} (1324) & (1432) & (14) &\cellcolor{yellow} (34) & (23) &\cellcolor{yellow} (12) & (1234) \\ \hline
+\cellcolor{yellow}(1324) & (1234) & (23) & (14) & (1432) &\cellcolor{yellow} (1423) & (13) & (1342) &\cellcolor{yellow} (12) & (1243) &\cellcolor{yellow} (34) & (24) \\ \hline
+(13) & (23) & (1423) & (12) & (1243) & (1234) & (1342) & (1324) & (24) & (34) & (1432) & (14) \\ \hline
+(23) & (12) & (1432) & (13) & (1324) & (1342) & (34) & (24) & (1243) & (1234) & (14) & (1423) \\ \hline
+(14) & (1324) & (24) & (1234) & (12) & (1243) & (1423) & (1432) & (1342) & (13) & (23) & (34) \\ \hline
+(24) & (1342) & (12) & (1423) & (14) & (1432) & (23) & (34) & (13) & (1324) & (1234) & (1243) \\ \hline
+(1234) & (14) & (34) & (1324) & (1342) & (13) & (1243) & (12) & (1432) & (1423) & (24) & (23) \\ \hline
+(1243) & (34) & (13) & (1432) & (1423) & (14) & (12) & (1234) & (23) & (24) & (1342) & (1324) \\ \hline
+(1342) & (1423) & (1234) & (24) & (34) & (23) & (1324) & (13) & (14) & (1432) & (1243) & (12) \\ \hline
+(1432) & (1243) & (1324) & (34) & (23) & (24) & (14) & (1423) & (1234) & (12) & (13) & (1342) \\ \hline
+\cellcolor{yellow}e & (132) & (142) & (123) & (124) &\cellcolor{yellow} (12)(34) & (234) & (243) &\cellcolor{yellow} (13)(24) & (134) &\cellcolor{yellow} (14)(23) & (143) \\ \hline
+(123) & e & (143) & (132) & (13)(24) & (134) & (12)(34) & (124) & (243) & (234) & (142) & (14)(23) \\ \hline
+(124) & (134) & e & (14)(23) & (142) & (143) & (123) & (12)(34) & (132) & (13)(24) & (234) & (243) \\ \hline
+(132) & (123) & (14)(23) & e & (243) & (234) & (134) & (13)(24) & (124) & (12)(34) & (143) & (142) \\ \hline
+(142) & (13)(24) & (124) & (234) & e & (243) & (14)(23) & (143) & (134) & (132) & (123) & (12)(34) \\ \hline
+\cellcolor{yellow}(12)(34) & (143) & (134) & (243) & (234) &\cellcolor{yellow} e & (124) & (123) &\cellcolor{yellow} (14)(23) & (142) &\cellcolor{yellow} (13)(24) & (132) \\ \hline
+(134) & (14)(23) & (234) & (124) & (12)(34) & (123) & (13)(24) & (132) & (142) & (143) & (243) & e \\ \hline
+(143) & (243) & (13)(24) & (12)(34) & (123) & (124) & (142) & (14)(23) & (234) & e & (132) & (134) \\ \hline
+\cellcolor{yellow}(14)(23) & (124) & (243) & (134) & (132) &\cellcolor{yellow} (13)(24) & (143) & (142) &\cellcolor{yellow} (12)(34) & (123) &\cellcolor{yellow} e & (234) \\ \hline
+(234) & (142) & (12)(34) & (13)(24) & (134) & (132) & (243) & e & (143) & (14)(23) & (124) & (123) \\ \hline
+\cellcolor{yellow}(13)(24) & (234) & (123) & (142) & (143) & \cellcolor{yellow}(14)(23) & (132) & (134) &\cellcolor{yellow} e & (243) & \cellcolor{yellow}(12)(34) & (124) \\ \hline
+(243) & (12)(34) & (132) & (143) & (14)(23) & (142) & e & (234) & (123) & (124) & (134) & (13)(24) \\ \hline
+\multicolumn{12}{l}{\colorbox{yellow}{Желтым фоном} выделена таблица подгруппы 8 порядка. Данная подгруппа некоммутативна.}
+\end{tabular}
+\end{table}
+
+
+
+
+
 \newpage
 \begin{center}
 \includegraphics[scale=0.40]{books.jpg}
 \end{center}
-
+\label{ENDPAGE}
 \clearpage
 
 
