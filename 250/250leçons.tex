@@ -31,8 +31,8 @@
 \hfuzz=2.3pt
 \interfootnotelinepenalty=10000  % максимально умещать сноски на 1 странице
 \usepackage[papersize={165mm,235mm},centering, %marginparsep=8pt,marginparwidth=15mm,%
-           % left=10mm,
-            textwidth=135mm,nohead,top=15mm,bottom=20mm]{geometry}   %,showframe
+           % left=10mm,nohead
+            textwidth=135mm,top=11mm,bottom=23mm]{geometry}   %,showframe
 \definecolor{lightYellow}{RGB}{255, 250, 205}
 \definecolor{lightRed}{RGB}{255, 182, 193}
 \definecolor{ColaRed}{RGB}{246, 36, 34}
@@ -153,19 +153,36 @@
 % ОФОРМЛЕНИЕ КОЛОНТИТУЛОВ, СНОСОК, НОМЕРОВ СТРАНИЦ
 \usepackage{fancyhdr,footmisc}
 \pagestyle{fancy}  % основной стиль для колонтитулов
-\fancyhead{} % очистим хидер на всякий случай
+\fancyhead{}  % очистим хидер на всякий случай
+\fancyhead[LE]{\hspace*{-15mm}\fcolorbox{darkred}{darkred}{%
+\begin{minipage}{13mm}
+\begin{flushleft}
+\textcolor{white}{\phantom{\Large Y}\hspace*{-3mm}{\sffamily урок} \\[1mm] \Huge\arabic{lektion}}
+\end{flushleft}
+\end{minipage}}}
+\fancyhead[RO]{\hspace*{\textwidth}\fcolorbox{darkred}{darkred}{%
+\begin{minipage}{13mm}
+\begin{flushright}
+\textcolor{white}{\phantom{\Large Y}{\sffamily урок}\hfill \\[1mm] \Huge\arabic{lektion}}
+\end{flushright}
+\end{minipage}}}
 \fancyfoot{} % очистим футер на всякий случай
 \renewcommand{\chaptermark}[1]{\markboth{\sffamily\chaptername\ \thechapter.\ #1}{}} % колонтитулы глав
 \renewcommand{\sectionmark}[1]{\markright{\sffamily\thesection.\ #1}}                % колонтитулы секций
 \renewcommand{\cftmarktoc}[1]{\markboth{\sffamily Содержание}{\sffamily Содержание}} % колонтитулы содержания
 \renewcommand{\footrulewidth}{0.5pt} % толщина отделяющей полоски снизу
-\renewcommand{\headrulewidth}{0pt}   % толщина отделяющей полоски сверху
+\renewcommand{\headrulewidth}{0.0pt}   % толщина отделяющей полоски сверху
 %\fancyhead[LO]{текст-слева-нечетные} 
 \fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
 \fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
 \renewcommand{\thepage}{\arabic{page}}                                % шрифт номера страницы
 \makeatletter
 \patchcmd{\footrule}
+  {\if@fancyplain}
+  {\color{darkred}\if@fancyplain}        % цвет отделяющей полоски футера
+  {}
+  {}
+\patchcmd{\headrule}
   {\if@fancyplain}
   {\color{darkred}\if@fancyplain}        % цвет отделяющей полоски футера
   {}
@@ -302,8 +319,8 @@
 
 \newcommand{\sep}[1]{\marginpar{$\mathnormal{#1}$ $\mathfrak{min}$}}
 
-\newcounter{lektion}\setcounter{lektion}{0}
-\newcommand{\lektion}{\refstepcounter{lektion}
+\newcounter{lektion}\setcounter{lektion}{200}
+\newcommand{\lektion}{
 \marginpar{  %\colorbox{darkred}{\textcolor{white}{\Huge\arabic{lektion}}}}
 \fcolorbox{darkred}{darkred}{%
 \begin{minipage}{5mm}
@@ -313,6 +330,15 @@
 \end{minipage}}
 }
 }
+
+\newcommand{\lesson}[1]{\vspace*{3mm plus 2mm}\refstepcounter{lektion}
+\noindent \hbox{{\color{darkGreen}\large\bfseries\sffamily Урок \arabic{lektion}}}\hfill
+\noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}\nopagebreak
+
+\noindent {\small\itshape #1}\nopagebreak
+\setcounter{enumi}{0}
+}
+
 
 % ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
 \newcounter{vrz}\setcounter{vrz}{0}
