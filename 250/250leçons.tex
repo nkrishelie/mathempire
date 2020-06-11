@@ -332,12 +332,13 @@
 }
 
 \newcommand{\lesson}[1]{\vspace*{3mm plus 2mm}\refstepcounter{lektion}
-\noindent \hbox{{\color{darkGreen}\large\bfseries\sffamily Урок \arabic{lektion}}}\hfill
-\noindent\makebox[\linewidth]{\color{darkred}\rule{\textwidth}{0.5pt}}\nopagebreak
-
+%\noindent
+\vbox{\hbox{{\color{darkGreen}\large\bfseries\sffamily Урок \arabic{lektion}}}\hfill\\[-15pt]
+{\color{darkred}\rule{\textwidth}{0.5pt}}
+%\nopagebreak
 \noindent {\small\itshape #1}\nopagebreak
 \setcounter{enumi}{0}
-}
+}}
 
 
 % ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
