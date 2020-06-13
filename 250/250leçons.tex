@@ -19,6 +19,7 @@
 \usepackage{wrapfig}
 \usepackage[english,russian]{babel}
 \usepackage{setspace}
+\usepackage[xcolor]{changebar}  % подсветка на полях
 %\usepackage{caption} 
 %\captionsetup[table]{skip=10pt}
 \usepackage[shortlabels]{enumitem}
@@ -48,6 +49,12 @@
 \definecolor{mauve}{RGB}{203,104,67}   % цвет комментариев на полях
 \renewcommand{\textbf}[1]{\textcolor{deepblue}{\bfseries\slshape #1}}
 
+\newcommand{\hard}[1]{%
+  \cbcolor{darkred}
+  \begin{changebar}
+    #1
+  \end{changebar}%
+  }%
 
 % ОФОРМЛЕНИЕ СОДЕРЖАНИЯ/ОГЛАВЛЕНИЯ, ЗАГОЛОВКОВ РАЗДЕЛОВ И ГЛАВ
 \usepackage{shorttoc,tocloft,titlesec,blindtext}
@@ -154,19 +161,19 @@
 \usepackage{fancyhdr,footmisc}
 \pagestyle{fancy}  % основной стиль для колонтитулов
 \fancyhead{}  % очистим хидер на всякий случай
+\fancyfoot{} % очистим футер на всякий случай
 \fancyhead[LE]{\hspace*{-15mm}\fcolorbox{darkred}{darkred}{%
 \begin{minipage}{13mm}
 \begin{flushleft}
-\textcolor{white}{\phantom{\Large Y}\hspace*{-3mm}{\sffamily урок} \\[1mm] \Huge\arabic{lektion}}
+\textcolor{white}{\phantom{\Large Y}\hspace*{-3mm} \\[1mm] \Huge\phantom{0}}
 \end{flushleft}
 \end{minipage}}}
 \fancyhead[RO]{\hspace*{\textwidth}\fcolorbox{darkred}{darkred}{%
 \begin{minipage}{13mm}
 \begin{flushright}
-\textcolor{white}{\phantom{\Large Y}{\sffamily урок}\hfill \\[1mm] \Huge\arabic{lektion}}
+\textcolor{white}{\phantom{\Large Y} \\[1mm] \Huge\phantom{0}}
 \end{flushright}
 \end{minipage}}}
-\fancyfoot{} % очистим футер на всякий случай
 \renewcommand{\chaptermark}[1]{\markboth{\sffamily\chaptername\ \thechapter.\ #1}{}} % колонтитулы глав
 \renewcommand{\sectionmark}[1]{\markright{\sffamily\thesection.\ #1}}                % колонтитулы секций
 \renewcommand{\cftmarktoc}[1]{\markboth{\sffamily Содержание}{\sffamily Содержание}} % колонтитулы содержания
