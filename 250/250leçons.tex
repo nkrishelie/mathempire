@@ -6,6 +6,7 @@
 \usepackage[figuresright]{rotating}
 \usepackage{multirow}
 \usepackage{etoolbox}
+\usepackage{glossaries}
 \usepackage{subcaption}
 \usepackage{pb-diagram}
 \usepackage{adjustbox}
@@ -19,7 +20,8 @@
 \usepackage{wrapfig}
 \usepackage[english,russian]{babel}
 \usepackage{setspace}
-\usepackage[xcolor]{changebar}  % подсветка на полях
+\usepackage[xcolor,pdftex,traceon,rightbars]{changebar}  % подсветка на полях
+\usepackage{pdflscape}
 %\usepackage{caption} 
 %\captionsetup[table]{skip=10pt}
 \usepackage[shortlabels]{enumitem}
@@ -49,8 +51,9 @@
 \definecolor{mauve}{RGB}{203,104,67}   % цвет комментариев на полях
 \renewcommand{\textbf}[1]{\textcolor{deepblue}{\bfseries\slshape #1}}
 
+\setlength{\changebarsep}{2ex}
 \newcommand{\hard}[1]{%
-  \cbcolor{darkred}
+  \cbcolor{yellow}
   \begin{changebar}
     #1
   \end{changebar}%
@@ -338,9 +341,25 @@
 }
 }
 
-\newcommand{\lesson}[1]{\vspace*{3mm plus 2mm}\refstepcounter{lektion}
+
+% Определение заголовков Уроков в тексти сбор их в таблицу всех уроков
+
+% define list of lessons
+\newcommand{\listlessonsname}{\vspace{-23mm}\quad\hfill\Large\bfseries\sffamily{СПИСОК УРОКОВ}\vspace{2mm}{\hrule}}
+\newlistof{mylessons}{lek}{\listlessonsname}
+\newcommand{\mylessons}[1]{\addcontentsline{lek}{mylessons}{\protect\numberline{\thelektion}#1}
+}
+\setlength{\cftmylessonsnumwidth}{2.3em}
+\setlength{\cftmylessonsindent}{1.5em}
+
+% command to box, label, reference, and 
+% include noteworthy equation in list of equations
+
+
+\newcommand{\lesson}[1]{\vspace*{2mm plus 1mm}\refstepcounter{lektion}
 %\noindent
-\vbox{\hbox{{\color{darkGreen}\large\bfseries\sffamily Урок \arabic{lektion}}}\hfill\\[-15pt]
+\mylessons{#1}
+\vbox{\noindent\colorbox{darkred}{{\color{white}\large\bfseries\sffamily Урок \thelektion}}\hfill\\[-8pt]
 {\color{darkred}\rule{\textwidth}{0.5pt}}
 %\nopagebreak
 \noindent {\small\itshape #1}\nopagebreak
@@ -646,6 +665,7 @@
 \makeindex
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%   ТЕКСТ   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -671,15 +691,19 @@
 %\part{Начала Анализа}
 \input{analysis}
 
-%\input{extention}
+\newpage
 
+\fancyhead{}  % очистим хидер
+\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|} % номер страницы слева на четных
+\fancyfoot[RO]{|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
 
 \printindex
 
+\listofmylessons
 
-\newappendix{Схемы и таблицы}
 
 \newpage\renewcommand{\arraystretch}{1.8}\renewcommand{\tabcolsep}{1mm}
+\renewcommand{\thetable}{}
 \begin{table}[h!]\tiny\sffamily %\fontfamily{iwona}\selectfont
 \caption{Таблица умножения симметрической группы $\Sb_4$}
 \label{SymmetricS4}
@@ -749,8 +773,6 @@
 \multicolumn{12}{l}{\colorbox{yellow}{Желтым фоном} выделена таблица подгруппы 8 порядка. Данная подгруппа некоммутативна.}
 \end{tabular}
 \end{table}
-
-
 
 
 
