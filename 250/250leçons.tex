@@ -345,7 +345,9 @@
 % Определение заголовков Уроков в тексти сбор их в таблицу всех уроков
 
 % define list of lessons
-\newcommand{\listlessonsname}{\vspace{-23mm}\quad\hfill\Large\bfseries\sffamily{СПИСОК УРОКОВ}\vspace{2mm}{\hrule}}
+\newcommand{\listlessonsname}{%
+\vspace{-23mm}\quad\hfill\Large\bfseries\sffamily{СПИСОК УРОКОВ}\vspace{2mm}\textcolor{darkred}{\hrule}
+\thispagestyle{empty}}
 \newlistof{mylessons}{lek}{\listlessonsname}
 \newcommand{\mylessons}[1]{\addcontentsline{lek}{mylessons}{\protect\numberline{\thelektion}#1}
 }
@@ -699,7 +701,78 @@
 
 \printindex
 
+\newpage
+\addcontentsline{toc}{chapter}{Список уроков}
 \listofmylessons
+
+\renewcommand\bibname{Список литературы}
+\begin{thebibliography}{199}
+\addcontentsline{toc}{chapter}{\bibname}
+\markboth{\sffamily Список литературы}{\sffamily Список литературы}
+
+\subsection*{Общематематические книги}
+
+\bibitem{Arnold} Арнольд~В.~И. \href{http://ilib.mccme.ru/djvu/arnold/ngbg.djvu?djvuopts&page=6}{Гюйгенс и Барроу, Ньютон и Гук.} --- М.: Наука, 1989.
+\bibitem{Boss} Босс~В. \href{https://booksee.org/book/467231}{Интуиция и математика}. --- Ленанд, 2017.
+\bibitem{Knuth:Concrete} Грэхем~Р., Кнут~Д., Паташник~О. \href{https://may.alleng.org/d/math/math163.htm}{Конкретная математика.} --- М.: Мир, 1998.
+\bibitem{Archetypes} Казимиров~Н.~И. \href{https://mathem.at}{Архетипы математики}. --- М.: Юстицинформ, 2019.
+\bibitem{Klain} Клайн~М. Математика. Утрата неопределенности. --- М.: Мир, 1984.
+\bibitem{Math} Математическая составляющая / Редакторы-составители Н.~Н.~Андреев, С.~П.~Коновалов, Н.~М.~Панюнин; Художник-оформитель Р.~А.~Кокшаров. --- М.: Фонд <<Мате­мати­ческие этюды>>, 2019.
+\bibitem{Curant} Курант~Р., Роббинс~Г. Что такое математика? --- Изд. 7-е., стереот. --- М.: МЦНМО, 2015. (для гуманитариев!)
+\bibitem{Problems} Проблемы Гильберта / под ред. П.~С.~Александрова --- М., Наука, 1969.
+\bibitem{Savva} Савватеев~А.~В. \href{https://savvateev.xyz/media/savva-book-new.pdf}{Математика для гуманитариев}. --- М. Русский фонд содействия образованию и науке, 2020.
+\bibitem{Foss} Фосс~А.~Э. \href{https://obuchalka.org/2014051577400/suschnost-matematiki-foss-aurel-edmund-2009.html}{Сущность математики}: Пер. с нем. Изд. 3-е. --- М.: Книжный дом <<ЛИБРОКОМ>>, 2009. (курс «Математика для всех», неделя 6, лекция 1)
+
+\subsection*{Логика и Теория множеств}
+
+\bibitem{Vereschagin} Верещагин~Н.~К., Шень~А. \href{https://www.mccme.ru/free-books/shen/shen-logic-part1-2.pdf}{Начала теории множеств}. --- М.: МЦМНО, 2012. 
+\bibitem{Dragalin} Колмогоров~А.~Н., Драгалин~А.~Г. Математическая логика. Дополнительные главы: Учеб. пособие. --- М.: Изд-во Моск. ун-та, 1984.
+\bibitem{Kohen} Коэн~П.~Дж. Теория множеств и континуум-гипотеза. --- М.: Мир, 1969.
+\bibitem{Henle} Henle~James~M. An Outline of Set Theory. --- New York etc.: Springer-Verlag, 1986. Русская версия: Хенл~Дж.~М. Введение в теорию множеств: Пер. с англ. --- М.: Радио и связь, 1993.
+
+
+
+\subsection*{Алгебра и Теория чисел}
+
+\bibitem{AIRLAND} Айерленд~К., Роузен~М.. Классическое введение в современную теорию чисел. --- М.: Мир, 1987.
+\bibitem{Atlas} \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{Атлас представлений конечных групп} [Электронный ресурс] --- Режим доступа: \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{http://brauer.maths.qmul.ac.uk/Atlas/v3/}, свободный.
+\bibitem{Artin} Артин~Э. Теория Галуа. Пер. с англ. А.~В.~Самохина. --- М.: МЦМНО, 2004.
+\bibitem{VanderVarden} Ван~дер~Варден~Б.~Л. Алгебра. --- М.: Наука, 1976.
+\bibitem{Winberg} Винберг~Э.~Б. Курс алгебры --- М.: Факториал Пресс, 2001.
+\bibitem{Helfand} Гельфанд~И.~М. \href{https://obuchalka.org/2013062272049/lekcii-po-lineinoi-algebre-gelfand-i-m-1998.html}{Лекции по линейной алгебре}. --- М.:МЦНМО, 1998.
+\bibitem{Gorod} Городенцев~А.~Л. Алгебра: Учебник для студентов-математиков. --- М.: факультет математики ВШЭ, 2011.
+\bibitem{ZS} Зарисский~О., Самюэль~П. \href{http://bookre.org/reader?file=1500259}{Коммутативная алгебра}, том 2. --- М.: ИЛ, 1963.
+\bibitem{Korn} Корн~Г., Корн~Т. Алгебра матриц и матричное исчисление // Справочник по математике. --- 4-е издание. --- М: Наука, 1978.
+\bibitem{Kostrikin} Кострикин~А.~И. \href{https://obuchalka.org/2017012692830/vvedenie-v-algebru-chast-1-osnovi-algebri-kostrikin-a-i-2004.html}{Введение в алгебру}. --- М. ФИЗМАТЛИТ, 2004.
+\bibitem{KM} Кострикин~А.~И., Манин~Ю.~И. \href{https://obuchalka.org/20100416367/lineinaya-algebra-i-geometriya-uchebnik-kostrikin-a-i-manin-u-i.html}{Линейная алгебра и геометрия}.
+\bibitem{Kurosh} Курош~А.~Г. Общая алгебра. --- М.: Наука, 1974.
+\bibitem{Leng} Ленг~С. Алгебра. --- М.: Наука, 1971.
+\bibitem{Postnikov} Постников~М.~М. Теория Галуа. --- М.: Факториал Пресс, 2003.
+\bibitem{PrasolovAlg} Прасолов~В.~В. Многочлены. 4-е изд., испр. --- М.: МЦНМО, 2014.
+\bibitem{Chashkin} Чашкин~А.~В., Жуков~Д.~А. \href{http://ebooks.bmstu.press/catalog/117/book1467.html}{Элементы конечной алгебры}. --- М.: Изд. МГТУ им.Баумана, 2016.
+\bibitem{MilesReid} Reid~M. \href{https://homepages.warwick.ac.uk/~masda/MA3D5/Galois.pdf}{Galois Theory}. --- University of Warwick, Coventry, 2014.
+
+
+\subsection*{Анализ, Геометрия, Топология}
+
+\bibitem{Arn} Арнольд~В.~И. \href{https://mccme.ru/arnold/books/odu-12.pdf}{Обыкновенные дифференциальные уравнения}. --- М.:МЦНМО, 2012.
+\bibitem{Berge} Берже~М.\href{https://obuchalka.org/2013062272057/geometriya-tom-1-berje-m-1984.html}{Геометрия}: Пер. с франц. --- М.:Мир, 1984. (тома 1 и 2)
+\bibitem{Borovkov} Боровков~А.~А. Теория вероятностей: Учеб. пособие для вузов. --- М.: Наука, 1986.
+\bibitem{Domrin} Домрин~А.~В., Сергеев~А.~Г. \href{http://www.mi-ras.ru/books/pdf/ser1.pdf}{Лекции по комплексному анализу. В 2 частях}. --- М.: МИАН, 2004.
+\bibitem{Zorich} Зорич~В.~А. \href{https://may.alleng.org/d/math/math460.htm}{Математический анализ}. --- М.: ФАЗИС; Наука; Ч.I., 1997; Ч.II., 1984.
+\bibitem{Karatn} Картан~А. \href{https://ikfia.ysn.ru/wp-content/uploads/2018/01/Kartan1963ru.pdf}{Элементарная теория аналитических функций одного и нескольких комплексных переменных}. --- М.ИИЛ, 1963.
+\bibitem{KolmFomin} Колмогоров~А.~Н., Фомин~С.~В. \href{https://b-ok.cc/book/443504/108801}{Элементы теории функций и функционального анализа}
+\bibitem{Plahov} Плахов~А.~Ю. \href{http://www.etudes.ru/data/localdocs/umn_plahov.pdf}{Рассеяние в биллиардах и задачи ньютоновской аэродинамики} // Успехи математических наук. --- 2009. --- Т.64. Вып.5 (389). --- С. 97—166.
+\bibitem{Prasol} Прасолов~В~.В. \href{https://yadi.sk/d/teZTJ7wC7L4r2}{Геометрия Лобачевского}. --- М.: МЦНМО, 2016.
+\bibitem{Prasolov} Прасолов~В~.В., Тихомиров~В.~М. \href{http://prasolov.loegria.net/Geometry.pdf}{Геометрия}. --- М.: МЦНМО, 2007.
+\bibitem{Prasol1} Прасолов~В~.В. \href{ftp://ftp.mccme.ru/users/prasolov/nagltop/pra.pdf}{Наглядная топология}. --- М.: МЦНМО, 1995.
+\bibitem{Rudin} Рудин.~У. \href{https://may.alleng.org/d/math/math344.htm}{Основы математического анализа}. Пер. с англ. Изд. 2-е. --- М.: Мир, 1976.
+\bibitem{Fichtenholz} Фихтенгольц~Г.~М. \href{https://obuchalka.org/201012217156/kurs-differencialnogo-i-integralnogo-ischisleniya-fihtengolc-g-m.html}{Курс дифференциального и интегрального исчисления}. В 3 т. Изд. 8-е. --- М.:Физматлит, 2003
+\bibitem{Feller} Феллер~В. \href{https://obuchalka.org/2013071272400/vvedenie-v-teoriu-veroyatnostei-i-ee-prilojeniya-tom-1-feller-v-1963.html}{Введение в теорию вероятностей и ее приложения}. --- М.:Мир, 1963.
+\bibitem{Engelking} Engelking~R. General Topolgy. --- Warszawa.: PWN, 1977. \textit{Русское издание}: Энгелькинг~Р. Общая топология. --- М.: Мир, 1986.
+
+\end{thebibliography}
+
 
 
 \newpage\renewcommand{\arraystretch}{1.8}\renewcommand{\tabcolsep}{1mm}
