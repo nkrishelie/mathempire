@@ -682,17 +682,18 @@
 
 \input{LevelAlpha}
 
-% Принципы математического мышления
-%\input{foundations}
+\newpage
 
-%\part{Визаульная математика}
-%\input{visual}
+\fancyhead{}  % очистим хидер
+\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|} % номер страницы слева на четных
+\fancyfoot[RO]{|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
 
-%\part{Элементы Алгебры}
-%\input{algebra}
+\newpage
+\addcontentsline{toc}{chapter}{Список уроков}
+\listofmylessons
 
-%\part{Начала Анализа}
-%\input{analysis}
+
+\input{LevelBeta}
 
 \newpage
 
@@ -701,10 +702,6 @@
 \fancyfoot[RO]{|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
 
 \printindex
-
-\newpage
-\addcontentsline{toc}{chapter}{Список уроков}
-\listofmylessons
 
 \renewcommand\bibname{Список литературы}
 \begin{thebibliography}{199}
