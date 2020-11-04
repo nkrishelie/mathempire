@@ -1,0 +1,56 @@
+{\thispagestyle{empty}
+%\clearpage
+%\setcounter{page}{0}
+
+
+\begin{flushright}
+\quad
+
+\vspace{2cm}
+
+{\fontsize{100pt}{0pt}\bfseries\sffamily ВВЕДЕНИЕ В\\[20pt] МАТЕМАТИКУ}
+
+
+\vspace{2cm}
+
+{\fontsize{20pt}{22pt}\sffamily листки с задачами\\
+<<100 урокам математики>> Алексея Савватеева\\[5pt]
+}
+
+\vspace{2cm}
+
+{\Large\bfseries\sffamily составители: Н.~Казимиров, П.~Иванов, М.~Бочкарев}
+
+\vfill
+
+{\Large\bfseries\sffamily 	Москва, \number\year}
+\end{flushright}
+}
+
+
+
+%\shorttableofcontents{Оглавление}{0}
+%\markboth{}{}
+
+%\clearpage
+%\renewcommand*\contentsname{\vspace{-20mm}\quad\hfill\Large\bfseries\sffamily\MakeUppercase{Содержание}\vspace{2mm}\textcolor{darkred}{\hrule}\thispagestyle{empty}}
+%\tableofcontents
+ 
+
+\nochapter{Аннотация к сборнику}
+
+Данный сборник задач может использоваться как приложение к конспекту \href{https://github.com/nkrishelie/mathempire/raw/master/250/250le\%C3\%A7ons.pdf}{<<Введение в математику>>} Алексея Савватеева, а также как самостоятельный практикум для изучения основ математики. Нумерация глав-уроков в сборнике соответствует урокам \href{https://childrenscience.ru/courses/sav/}{онлайн-курса}, подготовленным проектом <<Дети и наука>>.
+
+В каждом уроке даны ссылки на соответствующие видеоуроки и главы и разделы конспекта. Перед блоком задач даны краткие сведения из курса, содержащие необходимые определения и обозначения.
+
+При составлении задачника было использовано несколько источников, в частности, задачи видеокурса по <<100 урокам математики>> проекта \href{http://childrenscience.ru/}{<<Дети и наука>>}, листки задач кружка \href{https://www.shashkovs.ru/vmsh/}{Вечерней математической школы} в 179 школе г.~Москвы, листки задач для матшкольников из \href{https://dev.mccme.ru/~merzon/listki.html}{подборки Григория Мерзона}.
+
+Составители настоящего сборника: Николай Казимиров, Павел Иванов, Михаил Бочкарев.
+
+
+\quad
+
+\quad \hfill \today
+
+
+

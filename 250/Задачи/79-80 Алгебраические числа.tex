@@ -1,0 +1,141 @@
+% !TEX encoding = Windows Cyrillic
+
+\documentclass[a5paper,russian,11pt]{book}
+\usepackage[cp1251]{inputenc}
+\usepackage[a5paper,left=15mm,right=15mm, top=15mm,bottom=20mm,bindingoffset=0cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[matrix,arrow]{xy}
+
+\usepackage{cmap}
+\pagestyle{empty}
+
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amssymb,amsmath,amscd,amsthm}
+\usepackage{enumitem}
+\usepackage{tikz}\usetikzlibrary{calc, patterns}
+
+\usepackage{hyperref}
+%as dobavil
+\usepackage{epsfig}
+\usepackage[notref,notcite]{showkeys}
+
+% -----------макросы----------------
+% оформление задач, теорем, определений и пр.
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{definition}
+\newtheorem{pr}{}[section]
+\renewcommand{\thepr}{\arabic{pr}}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Теорема}[section]
+
+% определение списков для оформления подпунктов задач
+\newlist{subprs}{enumerate}{1}
+\setlist[subprs]{
+    label=\emph{\alph*)} ,
+    ref=\alph* ,
+    leftmargin=\parindent ,
+    topsep=0pt ,
+    partopsep=0pt ,
+    parsep=0pt ,
+    itemsep=0pt
+}
+
+
+% переопределения стилей оформления разделов
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+%addition from published version
+\usepackage{epsfig}
+\long\def\comment#1\endcomment{}
+\DeclareMathOperator*{\ex}{ex}
+\def\id{\mbox{id}}
+\def\st{\mbox{st}}
+\def\fix{\mbox{fix}}
+%\def\id{{\mathop id}}
+ \def\Z{{\mathbb Z}} \def\R{{\mathbb R}}
+\def\C{{\mathbb C}} \def\Q{{\mathbb Q}} \def\A{{\mathbb A}}
+
+
+
+
+
+\begin{document}
+
+{\bf 79-80 Алгебраические числа. }
+
+\begin{pr} Пусть $\frac{m}{n}$ --- несократимая дробь. Если $m$ или $n$ не являются $k$-ой степенью натурального числа, то $\sqrt[k]{\frac{m}{n}}$ является иррациональным числом.
+\end{pr}
+
+Для произвольных чисел $x,y$ рассмотрим множество $A_{(x,y)}$ точек вида $mx+ny$, где $m,n$ --- произвольные целые числа, через $B_{(x,y)}$ --- множество точек вида $mx+ny$, где $m,n$ --- произвольные рациональные числа. 
+
+
+\begin{pr} Если $\alpha \in A_{(x,y)}$, то и $k\alpha \in A_{(x,y)}$ для любого целого $k$.
+\end{pr}
+
+\begin{pr} Если $x,y$ --- целые взаимно простые числа, то $A_{(x,y)} = \Z$.
+\end{pr}
+
+\begin{pr} $mx+ny = 0$ при $m,n \neq 0$, $m,n \in \Z$ тогда и только тогда $\frac{x}{y}$ --- рациональное число.
+\end{pr}
+
+
+Будем говорить, что $A_{(x,y)}$ {\it отделено от нуля}, если найдётся $C > 0$, для которого все положительные элементы $A_{(x,y)}$ больше $C$.
+
+\begin{pr} Докажите, что $\alpha$ --- рациональное число тогда и только тогда, когда
+
+(а) Множество $A_{(1,\alpha)}$ отделено от нуля.
+
+(б) Множество $A_{(1,\alpha)}$ состоит из попарно разных элементов.
+
+(в) Множество $B_{(1,\alpha)}$ состоит из попарно разных элементов.
+\end{pr}
+
+Множество $M$ на числовой прямой называется \emph{всюду плотным (на числовой прямой)},
+если в любом интервале есть хотя бы одна точка из $M$.
+Аналогично определяется всюду плотное множество $M$ на окружности (плоскости): любая дуга (круг) содержит хотя бы одну точку из $M$.
+
+\begin{pr}
+По окружности длины 1 по часовой стрелке прыгает кузнечик, все прыжки имеют иррациональную длину $\alpha$. Пусть $M$ --- множество точек, куда может попасть кузнечик. Докажите, что
+(а) кузнечик никогда не попадёт дважды в одну и ту же точку;
+(б) любая дуга, содержащая начало, пересекается с $M$ по бесконечному числу точек;
+(в) $M$ всюду плотно на окружности.
+\end{pr}
+
+\begin{pr}
+Пусть $\alpha$ иррационально. Рассмотрим множество дробных частей чисел вида $n\alpha$, где $n\in\mathbb{N}$. Докажите, что это множество всюду плотно на отрезке $[0;1]$ (кстати, а что это значит?).
+\end{pr}
+
+\begin{pr} Внутри круга запускается точечный бильярдный шар и отражается от границы по закону <<угол падения равен углу отражения>>. Докажите, что траектория шара либо зацикливается, либо всюду плотно заполняет (а) граничную окружность;  (б) некоторое кольцо.
+\end{pr}
+
+\begin{pr} Точечный конь прыгает скачками $(\sqrt 2, \sqrt 3)$ по плоскости, где
+в каждой целой точке растет кукуруза (круг с центром в точке). Докажите, что он
+обязательно сшибет хотя бы один росток (конь сшибает росток только в
+том случае, если приземляется на него; в прыжках конь ростки не
+задевает).
+\end{pr}
+
+Пусть $\alpha \in \C$. Обозначим через $\Q(\alpha)$ --- минимальное поле, которое содержит $\Q$, $\alpha$, через $\Z[\alpha]$ --- минимальное кольцо, которое содержит $\Z$, $\alpha$.
+
+\begin{pr} Докажите, что определения, введённые выше корректны (то есть существует минимальное поле/кольцо, содержащее поле/кольцо и $\alpha$).
+\end{pr}
+
+\begin{pr} Докажите, что а) $\Z[\alpha] = \{f(\alpha) \mid f(x) \in \Z[x]\};$ б) $\Q(\alpha)= \left\{\frac{f(\alpha)}{g(\alpha)} \mid f(x),g(x) \in \Z[x],g(x)\neq 0\right\}.$
+\end{pr}
+
+\begin{pr} Докажите, что а) $\Z[\sqrt{2}] = A_{(1,\sqrt{2})}$, б) $\Q(\sqrt{2}) = B_{(1,\sqrt{2})} = \Q[\sqrt{2}]$.
+\end{pr}
+
+\begin{pr} Докажите, что $\sqrt{2}$ --- корень многочлена из $\Z[x]$ степени 2, и не является корнем никакого многочлена из $\Z[x]$ степени 1.
+\end{pr}
+
+
+
+
+
+
+
+\end{document}

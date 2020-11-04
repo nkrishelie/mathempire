@@ -1,0 +1,72 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{Аннотация к сборнику}{7}{section*.2}%
+\contentsline {chapter}{Урок\ 1.\ Числа, символы и фигуры\ }{8}{section*.3}%
+\contentsline {section}{\numberline {1.1}Понятие натурального числа}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Визуальные доказательства}{9}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Соизмеримость отрезков, алгоритм Евклида}{9}{section.1.3}%
+\contentsline {chapter}{Урок\ 2.\ Движения прямой\ }{10}{section*.4}%
+\contentsline {section}{\numberline {2.1}Сдвиг, композиция сдвигов, группа}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Отражение}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Таблица композиций движений прямой}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Теорема о гвоздях, аналог теоремы Шаля}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Все конечные подгруппы движений прямой}{11}{section.2.5}%
+\contentsline {chapter}{Урок\ 3.\ Вокруг окружности\ }{12}{section*.6}%
+\contentsline {section}{\numberline {3.1}Движения окружности}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Группа движений окружности, теорема Шаля}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Наматывание прямой на окружность}{12}{section.3.3}%
+\contentsline {chapter}{Урок\ 4.\ Целые числа и ОТА\ }{13}{section*.7}%
+\contentsline {section}{\numberline {4.1}Целые числа. Кольцо}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Кузнечик НОД и алгоритм Евклида}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Простые числа и ОТА}{13}{section.4.3}%
+\contentsline {chapter}{Урок\ 5.\ Симметрии фигур\ }{15}{section*.8}%
+\contentsline {section}{\numberline {5.1}Симметрии правильного треугольника}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Симметрии правильного многоугольника}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Подгруппы движений окружности}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Симметрии ромба, группа Клейна}{16}{section.5.4}%
+\contentsline {chapter}{Урок\ 6.\ Линейные уравнения\ }{17}{section*.9}%
+\contentsline {section}{\numberline {6.1}Уравнение прямой на плоскости}{17}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Линейные уравнения в целых числах}{17}{section.6.2}%
+\contentsline {chapter}{Урок\ 7.\ Рациональность\ и соизмеримость}{19}{section*.10}%
+\contentsline {section}{\numberline {7.1}Построение рациональных чисел}{19}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Соизмеримость. Иррациональности}{19}{section.7.2}%
+\contentsline {chapter}{Урок\ 8.\ Исчисление остатков\ }{20}{section*.11}%
+\contentsline {section}{\numberline {8.1}Арифметика остатков}{20}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Свойства арифметики остатков}{20}{section.8.2}%
+\contentsline {chapter}{Урок\ 9.\ Многочлены\ }{21}{section*.12}%
+\contentsline {chapter}{Урок\ 10.\ Перестановки\ }{22}{section*.13}%
+\contentsline {section}{\numberline {10.1}Теория множеств: отношения и функции}{22}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Обозначения перестановок}{23}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Пара слов о конечных группах}{23}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Знакопеременная группа}{23}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Структура группы перестановок}{24}{section.10.5}%
+\contentsline {chapter}{Урок\ 11.\ Движения плоскости\ и пространства}{25}{section*.14}%
+\contentsline {section}{\numberline {11.1}Виды движений плоскости. Теорема Шаля}{25}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Сравнение движений прямой, окружности и плоскости}{25}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Пара слов о движениях сферы}{25}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Пара слов о движениях пространства}{25}{section.11.4}%
+\contentsline {chapter}{Урок\ 12.\ Комплексная арифметика\ и алгебра}{27}{section*.15}%
+\contentsline {section}{\numberline {12.1}Алгебра комплексных чисел}{27}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Гауссовы целые числа}{27}{section.12.2}%
+\contentsline {chapter}{Урок\ 13.\ Введение в\ линейную алгебру}{28}{section*.16}%
+\contentsline {section}{\numberline {13.1}Преобразования}{28}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Подобия прямой и плоскости}{28}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Линейное пространство}{28}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Линейные операторы}{28}{section.13.4}%
+\contentsline {section}{\numberline {13.5}Арифметика матриц}{28}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Матрицы и комплексные числа}{28}{section.13.6}%
+\contentsline {section}{\numberline {13.7}Действие линейных отображений на векторном пространстве}{29}{section.13.7}%
+\contentsline {chapter}{Урок\ 14.\ Алгебраические числа\ }{30}{section*.17}%
+\contentsline {section}{\numberline {14.1}*Упорядоченные множества}{30}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Плотные множества}{30}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Зазоры между рациональными числами}{30}{section.14.3}%
+\contentsline {section}{\numberline {14.4}О построениях циркулем и линейкой}{30}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Многочлены и алгебраические числа}{31}{section.14.5}%
+\contentsline {chapter}{Урок\ 15.\ Континуум\ }{32}{section*.18}%
+\contentsline {section}{\numberline {15.1}Мощности множеств}{32}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Изоморфизмы}{32}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Действительные числа}{32}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Модели действительных чисел}{32}{section.15.4}%
+\contentsline {chapter}{Урок\ 16.\ Элементы\ математического анализа}{33}{section*.19}%
+\contentsline {section}{\numberline {16.1}Оценки и пределы}{33}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Экспонента}{33}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Комплексная экспонента}{34}{section.16.3}%
