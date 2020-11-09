@@ -23,9 +23,9 @@
 \usepackage[xcolor,pdftex,traceon,rightbars]{changebar}  % подсветка на полях
 \usepackage{pdflscape}
 %\usepackage{caption} 
-\captionsetup[figure]{skip=-5pt}
+\captionsetup[figure]{skip=0pt}
 \usepackage[shortlabels]{enumitem}
-\setlist[enumerate,1]{label = \arabic*., ref = \arabic*, itemsep=2pt+4pt-3pt, listparindent=\parindent, leftmargin=15pt}
+\setlist[enumerate,1]{label = \thechapter.\arabic*., ref = \thechapter.\arabic*, itemsep=2pt+4pt-3pt, listparindent=\parindent, leftmargin=0pt}
 \setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
