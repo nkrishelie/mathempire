@@ -471,6 +471,7 @@
 \newcommand{\Sr}[1][r]{\zeta^{(#1)}}
 \newcommand{\tSr}[1][r]{\Tilde{\zeta}^{(#1)}}
 \newcommand{\pot}[1]{\left\lceil#1\right\rceil}
+\newcommand{\pol}[1]{\left\lfloor#1\right\rfloor}
 \renewcommand{\bar}[1]{\overline{#1}}
 \newcommand{\const}{\mathrm{const}}
 \newcommand{\diam}{\mathrm{diam}}
