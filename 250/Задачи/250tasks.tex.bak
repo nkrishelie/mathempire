@@ -25,8 +25,8 @@
 %\usepackage{caption} 
 \captionsetup[figure]{skip=0pt}
 \usepackage[shortlabels]{enumitem}
-\setlist[enumerate,1]{label = \thechapter.\arabic*., ref = \thechapter.\arabic*, itemsep=2pt+4pt-3pt, listparindent=\parindent, leftmargin=0pt}
-\setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
+\setlist[enumerate,1]{label = {\color{darkred}\arabic*.}, ref = У\thechapter:\arabic*, itemsep=2pt+4pt-3pt, listparindent=\parindent, leftmargin=0pt}
+\setlist[enumerate,2]{label=\textcolor{darkred}{\bfseries\value*}, noitemsep}
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
 \tolerance=10000
@@ -38,7 +38,7 @@
             textwidth=170mm,top=10mm,bottom=20mm,centering]{geometry}   %,showframe
 \definecolor{lightYellow}{RGB}{255, 250, 205}
 \definecolor{lightRed}{RGB}{255, 182, 193}
-\definecolor{ColaRed}{RGB}{246, 36, 34}
+\definecolor{Cola}{RGB}{246, 36, 34}
 \definecolor{darkred}{RGB}{150,0,0} % используется для footrule, links, подписи под фотками, шапками таблицы, section
 \definecolor{lightGreen}{RGB}{127, 255, 212}
 \definecolor{darkGreen}{RGB}{0, 115, 54}  % subsection
@@ -664,6 +664,12 @@
 	{Ґ}{{\selectfont\char128}}1
 }
 %\renewcommand{\lstlistingname}{Листинг на \Python}
+
+\newcounter{punkt}
+\numberwithin{punkt}{enumi}
+\newcommand{\ipunkt}{\stepcounter{punkt}{\bfseries\color{darkred}\alph{punkt})}\;}
+
+\newcommand{\Zm}[1]{\Z/#1\Z}
 
 \makeindex
 
