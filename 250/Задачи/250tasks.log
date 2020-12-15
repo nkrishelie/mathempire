@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  7 DEC 2020 22:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  15 DEC 2020 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,12 +1857,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<../prod.png, id=50, 684.5575pt x 481.8pt>
+<../prod.png, id=51, 684.5575pt x 481.8pt>
 File: ../prod.png Graphic file (type png)
 <use ../prod.png>
 Package pdftex.def Info: ../prod.png  used on input line 18.
 (pdftex.def)             Requested size: 136.90907pt x 96.35829pt.
-<../mult.png, id=53, 1593.955pt x 1415.2875pt>
+<../mult.png, id=54, 1593.955pt x 1415.2875pt>
 File: ../mult.png Graphic file (type png)
 <use ../mult.png>
 Package pdftex.def Info: ../mult.png  used on input line 26.
@@ -1871,7 +1871,7 @@ Package pdftex.def Info: ../mult.png  used on input line 26.
 
  <../prod.png>]
 Excluding 'comment' comment. [6 <../mult.png>]
-<../soizmer.png, id=91, 615.29875pt x 428.60126pt>
+<../soizmer.png, id=92, 615.29875pt x 428.60126pt>
 File: ../soizmer.png Graphic file (type png)
 <use ../soizmer.png>
 Package pdftex.def Info: ../soizmer.png  used on input line 69.
@@ -1880,17 +1880,17 @@ Package pdftex.def Info: ../soizmer.png  used on input line 69.
 
  <../soizmer.png>]
 Excluding 'comment' comment. [8]
-<../pithagor.png, id=129, 1349.04pt x 660.4675pt>
+<../pithagor.png, id=130, 1349.04pt x 660.4675pt>
 File: ../pithagor.png Graphic file (type png)
 <use ../pithagor.png>
 Package pdftex.def Info: ../pithagor.png  used on input line 112.
 (pdftex.def)             Requested size: 337.25917pt x 165.11647pt.
-<../kub.png, id=130, 1339.0025pt x 662.475pt>
+<../kub.png, id=131, 1339.0025pt x 662.475pt>
 File: ../kub.png Graphic file (type png)
 <use ../kub.png>
 Package pdftex.def Info: ../kub.png  used on input line 119.
 (pdftex.def)             Requested size: 334.7498pt x 165.61835pt.
-<../ugolki.png, id=132, 1035.87pt x 240.14719pt>
+<../ugolki.png, id=133, 1035.87pt x 240.14719pt>
 File: ../ugolki.png Graphic file (type png)
 <use ../ugolki.png>
 Package pdftex.def Info: ../ugolki.png  used on input line 132.
@@ -1898,17 +1898,17 @@ Package pdftex.def Info: ../ugolki.png  used on input line 132.
  [9
 
  <../pithagor.png> <../kub.png>]
-<../triangle.png, id=146, 733.99219pt x 189.70876pt>
+<../triangle.png, id=147, 733.99219pt x 189.70876pt>
 File: ../triangle.png Graphic file (type png)
 <use ../triangle.png>
 Package pdftex.def Info: ../triangle.png  used on input line 137.
 (pdftex.def)             Requested size: 73.4035pt x 18.97198pt.
-<../sumquad.png, id=148, 610.53094pt x 128.73094pt>
+<../sumquad.png, id=149, 610.53094pt x 128.73094pt>
 File: ../sumquad.png Graphic file (type png)
 <use ../sumquad.png>
 Package pdftex.def Info: ../sumquad.png  used on input line 149.
 (pdftex.def)             Requested size: 457.89708pt x 96.54794pt.
-<../sumquad2.png, id=150, 329.73187pt x 295.1025pt>
+<../sumquad2.png, id=151, 329.73187pt x 295.1025pt>
 File: ../sumquad2.png Graphic file (type png)
 <use ../sumquad2.png>
 Package pdftex.def Info: ../sumquad2.png  used on input line 157.
@@ -1916,7 +1916,7 @@ Package pdftex.def Info: ../sumquad2.png  used on input line 157.
 
 Excluding 'comment' comment. [10 <../ugolki.png (PNG copy)> <../triangle.png (P
 NG copy)> <../sumquad.png> <../sumquad2.png (PNG copy)>]
-<../geomseq.png, id=176, 805.0075pt x 805.0075pt>
+<../geomseq.png, id=177, 805.0075pt x 805.0075pt>
 File: ../geomseq.png Graphic file (type png)
 <use ../geomseq.png>
 Package pdftex.def Info: ../geomseq.png  used on input line 193.
@@ -1925,7 +1925,7 @@ Package pdftex.def Info: ../geomseq.png  used on input line 193.
 
 ]
 Excluding 'comment' comment. [12 <../geomseq.png>]
-<../ABCD.png, id=210, 412.54124pt x 40.15pt>
+<../ABCD.png, id=211, 412.54124pt x 40.15pt>
 File: ../ABCD.png Graphic file (type png)
 <use ../ABCD.png>
 Package pdftex.def Info: ../ABCD.png  used on input line 273.
@@ -1960,7 +1960,7 @@ Underfull \hbox (badness 3364) in paragraph at lines 362--364
 
 ] Excluding 'comment' comment.
 [24]
-<../weekdays.png, id=375, 780.9175pt x 351.3125pt>
+<../weekdays.png, id=376, 780.9175pt x 351.3125pt>
 File: ../weekdays.png Graphic file (type png)
 <use ../weekdays.png>
 Package pdftex.def Info: ../weekdays.png  used on input line 575.
@@ -1968,7 +1968,7 @@ Package pdftex.def Info: ../weekdays.png  used on input line 575.
  [25
 
 ] Excluding 'comment' comment. [26 <../weekdays.png>]
-<mod5mult.png, id=407, 119.4864pt x 119.0046pt>
+<mod5mult.png, id=408, 119.4864pt x 119.0046pt>
 File: mod5mult.png Graphic file (type png)
 <use mod5mult.png>
 Package pdftex.def Info: mod5mult.png  used on input line 628.
@@ -2005,9 +2005,14 @@ Missing character: There is no ñ in font cmr12!
 ] Excluding 'comment' comment.
 [46] [47
 
-] Excluding 'comment' comment. [48]) [49
+] Excluding 'comment' comment. [48] [49
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1631
+
+ []
+
+) [50]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
  (./250tasks.aux)
@@ -2020,13 +2025,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 45321 strings out of 481239
- 913193 string characters out of 5920378
- 1475221 words of memory out of 5000000
- 59260 multiletter control sequences out of 15000+600000
+ 45545 strings out of 481239
+ 917262 string characters out of 5920378
+ 1479221 words of memory out of 5000000
+ 59473 multiletter control sequences out of 15000+600000
  553937 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,100p,1596b,669s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,100p,1596b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texmf
 /fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
@@ -2049,10 +2054,10 @@ re/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfs
 x2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx3583.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on 250tasks.pdf (49 pages, 716548 bytes).
+Output written on 250tasks.pdf (50 pages, 726712 bytes).
 PDF statistics:
- 1063 PDF objects out of 1200 (max. 8388607)
- 952 compressed objects within 10 object streams
- 457 named destinations out of 1000 (max. 500000)
+ 1081 PDF objects out of 1200 (max. 8388607)
+ 969 compressed objects within 10 object streams
+ 468 named destinations out of 1000 (max. 500000)
  290 words of extra memory for PDF output out of 10000 (max. 10000000)
 
