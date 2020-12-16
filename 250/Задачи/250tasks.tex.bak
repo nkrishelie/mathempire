@@ -184,7 +184,7 @@
 \renewcommand{\headrulewidth}{0.5pt}   % толщина отделяющей полоски сверху
 %\fancyhead[LO]{текст-слева-нечетные} 
 \fancyhead[LE]{\vspace{10mm}\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
-\fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
+\fancyhead[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
 \renewcommand{\thepage}{\arabic{page}}                                % шрифт номера страницы
 \makeatletter
 \patchcmd{\footrule}
