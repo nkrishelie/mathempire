@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  19 DEC 2020 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  31 DEC 2020 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1963,7 +1963,7 @@ Underfull \hbox (badness 3364) in paragraph at lines 362--364
 <../weekdays.png, id=376, 780.9175pt x 351.3125pt>
 File: ../weekdays.png Graphic file (type png)
 <use ../weekdays.png>
-Package pdftex.def Info: ../weekdays.png  used on input line 575.
+Package pdftex.def Info: ../weekdays.png  used on input line 577.
 (pdftex.def)             Requested size: 312.36147pt x 140.5225pt.
  [25
 
@@ -1971,7 +1971,7 @@ Package pdftex.def Info: ../weekdays.png  used on input line 575.
 <mod5mult.png, id=408, 119.4864pt x 119.0046pt>
 File: mod5mult.png Graphic file (type png)
 <use mod5mult.png>
-Package pdftex.def Info: mod5mult.png  used on input line 628.
+Package pdftex.def Info: mod5mult.png  used on input line 630.
 (pdftex.def)             Requested size: 101.57957pt x 101.1707pt.
  [27
 
@@ -1990,7 +1990,7 @@ Excluding 'comment' comment. [30] [31
 
 ] Excluding 'comment' comment. [38]
 
-LaTeX Warning: Command \cyrs invalid in math mode on input line 1117.
+LaTeX Warning: Command \cyrs invalid in math mode on input line 1119.
 
 Missing character: There is no с in font cmr12!
 [39
@@ -2006,19 +2006,19 @@ Missing character: There is no с in font cmr12!
 [46] [47
 
 ] [48]
-Overfull \hbox (13.94695pt too wide) in paragraph at lines 1602--1632
+Overfull \hbox (13.94695pt too wide) in paragraph at lines 1604--1634
 [] [] 
  []
 
 [49]
-Overfull \hbox (6.92311pt too wide) in paragraph at lines 1637--1667
+Overfull \hbox (6.92311pt too wide) in paragraph at lines 1639--1669
 [] [] 
  []
 
 Excluding 'comment' comment. [50] [51
 
 ] Excluding 'comment' comment. [52]
-Underfull \hbox (badness 3068) in paragraph at lines 1839--1842
+Underfull \hbox (badness 3068) in paragraph at lines 1841--1844
 []\T2A/cmr/m/n/12 ƒокажите, что []\T2A/cmr/bx/n/12 a)[]\T2A/cmr/m/n/12 пустое м
 но-же-ство €в-л€-ет-с€ под-мно-же-ством лю-бо-го мно-же-ства;
  []
@@ -2027,10 +2027,10 @@ Underfull \hbox (badness 3068) in paragraph at lines 1839--1842
 
 ]
 
-LaTeX Warning: Command \d invalid in math mode on input line 1866.
+LaTeX Warning: Command \d invalid in math mode on input line 1868.
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 1880--1891
+Underfull \hbox (badness 3919) in paragraph at lines 1882--1893
 []\T2A/cmr/m/n/12 ѕусть $\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 
 f\OT1/cmr/m/n/12 57\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 91\OML/cmm/m/it/12 ; \OT1
 /cmr/m/n/12 179\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 239\OMS/cmsy/m/n/12 g\OML/cmm
@@ -2048,22 +2048,29 @@ Excluding 'comment' comment. [54] [55
 <../equiv.png, id=899, 709.65125pt x 659.46375pt>
 File: ../equiv.png Graphic file (type png)
 <use ../equiv.png>
-Package pdftex.def Info: ../equiv.png  used on input line 1988.
+Package pdftex.def Info: ../equiv.png  used on input line 1990.
 (pdftex.def)             Requested size: 177.41237pt x 164.86552pt.
 <../lessthan.png, id=900, 709.65125pt x 659.46375pt>
 File: ../lessthan.png Graphic file (type png)
 <use ../lessthan.png>
-Package pdftex.def Info: ../lessthan.png  used on input line 1989.
+Package pdftex.def Info: ../lessthan.png  used on input line 1991.
 (pdftex.def)             Requested size: 177.41237pt x 164.86552pt.
  Excluding 'comment' comment. [56 <../equiv.png> <../lessthan.png>] [57
 
-] Excluding 'comment' comment. [58]) [59
+] Excluding 'comment' comment. [58] [59
+
+]
+Excluding 'comment' comment. [60] [61
+
+] Excluding 'comment' comment. [62]
+[63
+
+] Excluding 'comment' comment. [64]) [65
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
-
-(./250tasks.aux)
+ (./250tasks.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 708.
 
@@ -2073,11 +2080,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 45672 strings out of 481239
- 918603 string characters out of 5920378
+ 45737 strings out of 481239
+ 919135 string characters out of 5920378
  1491224 words of memory out of 5000000
- 59503 multiletter control sequences out of 15000+600000
- 558150 words of font info for 78 fonts, out of 8000000 for 9000
+ 59507 multiletter control sequences out of 15000+600000
+ 559010 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,100p,1596b,1094s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texmf
@@ -2097,18 +2104,18 @@ pe1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfbl1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfso1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfss2074.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfsx3583.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfti1200.pfb>
-Output written on 250tasks.pdf (59 pages, 852568 bytes).
+s/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfso1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfss2074.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfsx3583.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on 250tasks.pdf (65 pages, 895892 bytes).
 PDF statistics:
- 1252 PDF objects out of 1440 (max. 8388607)
- 1121 compressed objects within 12 object streams
- 542 named destinations out of 1000 (max. 500000)
- 332 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1367 PDF objects out of 1440 (max. 8388607)
+ 1228 compressed objects within 13 object streams
+ 601 named destinations out of 1000 (max. 500000)
+ 356 words of extra memory for PDF output out of 10000 (max. 10000000)
 
