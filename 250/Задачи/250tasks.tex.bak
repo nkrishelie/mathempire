@@ -442,6 +442,7 @@
 \newcommand{\Lcal}{\mathcal L}
 \newcommand{\Ncal}{\mathcal N}
 \newcommand{\Mcal}{\mathcal M}
+\newcommand{\Ccal}{\mathcal C}
 \newcommand{\Ucal}{\mathcal U}
 \newcommand{\Acal}{\mathcal A}
 \newcommand{\Bcal}{\mathcal B}
@@ -460,7 +461,7 @@
 \newcommand{\Harm}{\mathcal H}
 \newcommand{\Hcal}{\mathcal H}
 \renewcommand{\O}{\mathbb O}
-\newcommand{\cgot}{\mathfrak c}
+\newcommand{\cgot}{mathfrak c}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\N}{\mathbb N}
 \renewcommand{\f}{\mathfrak f}
