@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  12 MAR 2021 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  13 MAR 2021 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2160,18 +2160,25 @@ Excluding 'comment' comment. [99
 Excluding 'comment' comment. [110] [111
 
 ]
-Underfull \hbox (badness 1688) in paragraph at lines 3812--3813
+Underfull \hbox (badness 1688) in paragraph at lines 3813--3814
 []\T2A/cmr/m/n/12 последовательности Фи-бо-нач-чи (по-сле-до-ва-тель-но-сти, уд
 о-вле-тво-ря-ю-щие усло-вию
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3818--3821
+Underfull \hbox (badness 10000) in paragraph at lines 3819--3822
 []\T2A/cmr/m/n/12 Являются ли ли-ней-но неза-ви-си-мы-ми век-то-ры сле-ду-ю-щих
  мно-жеств:
  []
 
-) [112]
+[112] Excluding 'comment' comment. [113] [114
+
+] [115
+
+]
+Excluding 'comment' comment. [116]) [117
+
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 714.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 714.
  (./250tasks.aux)
@@ -2184,10 +2191,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 46274 strings out of 481239
- 923742 string characters out of 5920378
+ 46312 strings out of 481239
+ 924045 string characters out of 5920378
  1491257 words of memory out of 5000000
- 59564 multiletter control sequences out of 15000+600000
+ 59567 multiletter control sequences out of 15000+600000
  566917 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,1596b,1094s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2225,10 +2232,10 @@ s/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfsx3583.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfti1200.pfb>
-Output written on 250tasks.pdf (112 pages, 1118737 bytes).
+Output written on 250tasks.pdf (117 pages, 1130344 bytes).
 PDF statistics:
- 2286 PDF objects out of 2487 (max. 8388607)
- 2082 compressed objects within 21 object streams
- 1058 named destinations out of 1200 (max. 500000)
- 540 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2362 PDF objects out of 2487 (max. 8388607)
+ 2152 compressed objects within 22 object streams
+ 1093 named destinations out of 1200 (max. 500000)
+ 556 words of extra memory for PDF output out of 10000 (max. 10000000)
 
