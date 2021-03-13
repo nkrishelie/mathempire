@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  13 MAR 2021 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  13 MAR 2021 22:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2191,8 +2191,8 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 46312 strings out of 481239
- 924045 string characters out of 5920378
+ 46313 strings out of 481239
+ 924053 string characters out of 5920378
  1491257 words of memory out of 5000000
  59567 multiletter control sequences out of 15000+600000
  566917 words of font info for 98 fonts, out of 8000000 for 9000
@@ -2232,10 +2232,10 @@ s/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfsx3583.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfti1200.pfb>
-Output written on 250tasks.pdf (117 pages, 1130344 bytes).
+Output written on 250tasks.pdf (117 pages, 1131325 bytes).
 PDF statistics:
- 2362 PDF objects out of 2487 (max. 8388607)
- 2152 compressed objects within 22 object streams
- 1093 named destinations out of 1200 (max. 500000)
+ 2363 PDF objects out of 2487 (max. 8388607)
+ 2153 compressed objects within 22 object streams
+ 1094 named destinations out of 1200 (max. 500000)
  556 words of extra memory for PDF output out of 10000 (max. 10000000)
 
