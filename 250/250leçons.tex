@@ -133,6 +133,8 @@
 \clearpage
 \ifodd\value{page}\else\quad\clearpage\fi
 \refstepcounter{appendix}
+\setcounter{section}{0}
+\setcounter{upr}{0}
 \setcounter{footnote}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
@@ -144,7 +146,7 @@
 \renewcommand{\thefigure}{\theapp.\arabic{figure}}
 \renewcommand{\thetable}{\theapp.\arabic{table}}
 \phantomsection
-%\addcontentsline{toc}{chapter}{Приложение\ \theapp.\ #2\ #1}
+\addcontentsline{toc}{chapter}{Приложение\ \theapp.\ #2\ #1}
 \vbox{
 \begin{flushright}
 {\Large\bfseries\sffamily ПРИЛОЖЕНИЕ\ \theapp}
