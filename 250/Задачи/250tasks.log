@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  16 MAR 2021 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  17 MAR 2021 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2183,22 +2183,18 @@ Overfull \hbox (26.65234pt too wide) in paragraph at lines 4013--4032
 [][]
  []
 
-Excluding 'comment' comment. [118] Excluding 'comment' comment. [119
+Excluding 'comment' comment. [118] [119
 
-] [120
-
-]
-<det.png, id=1900, 432.86719pt x 86.57344pt>
+] Excluding 'comment' comment. [120]
+<det.png, id=1916, 432.86719pt x 86.57344pt>
 File: det.png Graphic file (type png)
 <use det.png>
-Package pdftex.def Info: det.png  used on input line 4111.
+Package pdftex.def Info: det.png  used on input line 4180.
 (pdftex.def)             Requested size: 303.00496pt x 60.60098pt.
 
-Excluding 'comment' comment. [121
+[121
 
- <./det.png (PNG copy)>] [122
-
-] [123
+ <./det.png (PNG copy)>] Excluding 'comment' comment. [122] [123
 
 ]) [124]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
@@ -2214,8 +2210,8 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 46384 strings out of 481239
- 924659 string characters out of 5920378
+ 46400 strings out of 481239
+ 924787 string characters out of 5920378
  1491263 words of memory out of 5000000
  59579 multiletter control sequences out of 15000+600000
  566917 words of font info for 98 fonts, out of 8000000 for 9000
@@ -2255,10 +2251,10 @@ s/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfsx3583.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfti1200.pfb>
-Output written on 250tasks.pdf (124 pages, 1159907 bytes).
+Output written on 250tasks.pdf (124 pages, 1164830 bytes).
 PDF statistics:
- 2484 PDF objects out of 2487 (max. 8388607)
- 2265 compressed objects within 23 object streams
- 1153 named destinations out of 1200 (max. 500000)
+ 2502 PDF objects out of 2984 (max. 8388607)
+ 2283 compressed objects within 23 object streams
+ 1169 named destinations out of 1200 (max. 500000)
  585 words of extra memory for PDF output out of 10000 (max. 10000000)
 
