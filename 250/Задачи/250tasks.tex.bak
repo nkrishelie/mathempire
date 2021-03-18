@@ -461,7 +461,7 @@
 \renewcommand{\H}{\mathbb H}
 \newcommand{\Harm}{\mathcal H}
 \newcommand{\Hcal}{\mathcal H}
-\renewcommand{\O}{\mathbb O}
+\renewcommand{\O}{\mathrm O}
 \newcommand{\cgot}{mathfrak c}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\N}{\mathbb N}
