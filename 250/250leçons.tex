@@ -13,6 +13,10 @@
 \usepackage{amssymb}
 \usepackage[TS1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{pscyr}
+\renewcommand{\rmdefault}{fha} % Handbook font     % Основной шрифт текста
+\renewcommand{\sfdefault}{ftx} % Textbook font     % Рубленый шрифт
+\SetMathAlphabet{\mathsf}{normal}{T2A}{ftx}{m}{n}  % Рубленый шрифт для матем.
 %\usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -26,7 +30,10 @@
 \captionsetup[figure]{skip=-5pt}
 \usepackage[shortlabels]{enumitem}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*, leftmargin=0pt, itemsep=2pt+4pt-3pt, listparindent=\parindent}
-\setlist[enumerate,2]{label={\color{darkGreen}\value*}, noitemsep}
+\setlist[enumerate,2]{label=\textcolor{darkred}{\bfseries\value*}, noitemsep}
+
+
+
 
 % ОБЩИЕ НАСТРОЙКИ ТЕКСТА
 \tolerance=10000
@@ -61,11 +68,11 @@
 
 % ОФОРМЛЕНИЕ СОДЕРЖАНИЯ/ОГЛАВЛЕНИЯ, ЗАГОЛОВКОВ РАЗДЕЛОВ И ГЛАВ
 \usepackage{shorttoc,tocloft,titlesec,blindtext}
-\titleformat{\chapter}[block]{}{}{}{\quad\hfill\Large\bfseries\sffamily\MakeUppercase}%
+\titleformat{\chapter}[block]{}{}{}{\quad\hfill\Large\bfseries\MakeUppercase}%\sffamily
 [\vspace{-20pt}\textcolor{darkred}{\hrule}\vspace{10mm}\thispagestyle{empty}]   % используется только для ненумерованных и литературы
-\titleformat{\section}{\color{darkred}\Large\bfseries\sffamily}{\thesection}{5pt}{\color{darkred}\Large\bfseries}
-\titleformat{\subsection}{\color{darkGreen}\large\bfseries\sffamily}{\thesubsection}{5pt}{\color{darkGreen}\large\bfseries}
-\titleformat{\subsubsection}{\color{deepblue}\large\bfseries\sffamily}{\thesubsubsection}{5pt}{\color{deepblue}\large\bfseries}
+\titleformat{\section}{\color{darkred}\Large\bfseries}{\thesection}{5pt}{\color{darkred}\Large\bfseries}
+\titleformat{\subsection}{\color{darkGreen}\large\bfseries}{\thesubsection}{5pt}{\color{darkGreen}\large\bfseries}
+\titleformat{\subsubsection}{\color{deepblue}\large\bfseries}{\thesubsubsection}{5pt}{\color{deepblue}\large\bfseries}
 % Настройка вертикальных и горизонтальных отступов
 \titlespacing{\chapter}{-10pt}{0pt}{*3}
 \titlespacing{\section}{0pt}{*4}{*2}
@@ -98,11 +105,11 @@
 \addcontentsline{toc}{chapter}{Глава\ \thechapter.\ #2\ #1}
 \vbox{
 \begin{flushright}
-{\Large\bfseries\sffamily ГЛАВА\ \thechapter}
+{\Large\bfseries ГЛАВА\ \thechapter}
 \vspace{5pt}
 \textcolor{darkred}{\hrule}
 \vspace{10pt}
-{\Huge\bfseries\sffamily #2\isnotempty{#1}{\\[12pt]#1}{}}
+{\Huge\bfseries #2\isnotempty{#1}{\\[12pt]#1}{}}
 \vspace{10mm}
 \end{flushright}}
 \chaptermark{#2\ #1}
@@ -117,12 +124,12 @@
 \phantomsection
 %\addcontentsline{toc}{chapter}{#1}
 \begin{flushright}
-{\Large\bfseries\sffamily\MakeUppercase{#1}}
+{\Large\bfseries\MakeUppercase{#1}}
 \vspace{5pt}
 \textcolor{darkred}{\hrule}
 \vspace{10mm}
 \end{flushright}
-\markboth{\sffamily #1}{\sffamily #1}
+\markboth{#1}{ #1}
 \thispagestyle{empty}
 }
 
@@ -149,14 +156,14 @@
 \addcontentsline{toc}{chapter}{Приложение\ \theapp.\ #2\ #1}
 \vbox{
 \begin{flushright}
-{\Large\bfseries\sffamily ПРИЛОЖЕНИЕ\ \theapp}
+{\Large\bfseries ПРИЛОЖЕНИЕ\ \theapp}
 \vspace{5pt}
 \textcolor{darkred}{\hrule}
 \vspace{10pt}
-{\Huge\bfseries\sffamily #2 \\[12pt] #1}
+{\Huge\bfseries #2 \\[12pt] #1}
 \vspace{10mm}
 \end{flushright}}
-\markboth{\sffamily Приложение\ \theapp.\ #2\ #1}{\sffamily Приложение\ \theapp.\ #2\ #1}
+\markboth{Приложение\ \theapp.\ #2\ #1}{ Приложение\ \theapp.\ #2\ #1}
 \thispagestyle{empty}
 }
 
@@ -170,23 +177,23 @@
 \fancyhead[LE]{\hspace*{-15mm}\fcolorbox{darkred}{darkred}{%
 \begin{minipage}{13mm}
 \begin{flushleft}
-\textcolor{white}{\phantom{\Large Y}\hspace*{-3mm} \\[1mm] \Huge\phantom{0}}
+\textcolor{white}{\Huge\phantom{Ï}A\phantom{j}}
 \end{flushleft}
 \end{minipage}}}
 \fancyhead[RO]{\hspace*{\textwidth}\fcolorbox{darkred}{darkred}{%
 \begin{minipage}{13mm}
-\begin{flushright}
-\textcolor{white}{\phantom{\Large Y} \\[1mm] \Huge\phantom{0}}
-\end{flushright}
+\begin{center}
+\textcolor{white}{\Huge\phantom{Ï}A\phantom{j}}
+\end{center}
 \end{minipage}}}
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\chaptername\ \thechapter.\ #1}{}} % колонтитулы глав
-\renewcommand{\sectionmark}[1]{\markright{\sffamily\thesection.\ #1}}                % колонтитулы секций
-\renewcommand{\cftmarktoc}[1]{\markboth{\sffamily Содержание}{\sffamily Содержание}} % колонтитулы содержания
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}} % колонтитулы глав
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}                % колонтитулы секций
+\renewcommand{\cftmarktoc}[1]{\markboth{Содержание}{Содержание}} % колонтитулы содержания
 \renewcommand{\footrulewidth}{0.5pt} % толщина отделяющей полоски снизу
 \renewcommand{\headrulewidth}{0.0pt}   % толщина отделяющей полоски сверху
 %\fancyhead[LO]{текст-слева-нечетные} 
-\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
-\fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
+\fancyfoot[LE]{\makebox[4ex][l]{\bfseries\thepage}\;|\quad \leftmark} % номер страницы слева на четных
+\fancyfoot[RO]{\rightmark\quad|\;\makebox[4ex][r]{\bfseries\thepage}} % номер страницы справа на нечетных
 \renewcommand{\thepage}{\arabic{page}}                                % шрифт номера страницы
 \makeatletter
 \patchcmd{\footrule}
@@ -271,7 +278,7 @@
 \let\oldbaselinestretch=\baselinestretch
 \setcounter{totalnumber}{10}
 \setcounter{topnumber}{10}
-\setlength{\intextsep}{0pt}% used only by wrapfig
+\setlength{\intextsep}{5pt}% used only by wrapfig
 \newcommand{\adduprL}[1][]{
 \refstepcounter{upr}
 \begin{wrapfigure}{l}{15mm}
@@ -344,17 +351,17 @@
 }
 
 
-% Определение заголовков Уроков в тексти сбор их в таблицу всех уроков
+% Определение заголовков Уроков в тексте и сбор их в таблицу всех уроков
 
 % define list of lessons
-\newcommand{\listlessonsname}{%
-\vspace{-23mm}\quad\hfill\Large\bfseries\sffamily{СПИСОК УРОКОВ}\vspace{2mm}\textcolor{darkred}{\hrule}
-\thispagestyle{empty}}
-\newlistof{mylessons}{lek}{\listlessonsname}
-\newcommand{\mylessons}[1]{\addcontentsline{lek}{mylessons}{\protect\numberline{\thelektion}#1}
-}
-\setlength{\cftmylessonsnumwidth}{2.3em}
-\setlength{\cftmylessonsindent}{1.5em}
+%\newcommand{\listlessonsname}{%
+%\vspace{-23mm}\quad\hfill\Large\bfseries\sffamily{СПИСОК УРОКОВ}\vspace{2mm}\textcolor{darkred}{\hrule}
+%\thispagestyle{empty}}
+%\newlistof{mylessons}{lek}{\listlessonsname}
+%\newcommand{\mylessons}[1]{\addcontentsline{lek}{mylessons}{\protect\numberline{\thelektion}#1}
+%}
+%\setlength{\cftmylessonsnumwidth}{2.3em}
+%\setlength{\cftmylessonsindent}{1.5em}
 
 % command to box, label, reference, and 
 % include noteworthy equation in list of equations
@@ -362,13 +369,14 @@
 
 \newcommand{\lesson}[1]{\vspace*{2mm plus 1mm}\refstepcounter{lektion}
 %\noindent
-\mylessons{#1}
-\vbox{\noindent\colorbox{darkred}{{\color{white}\large\bfseries\sffamily Урок \thelektion}}\hfill\\[-8pt]
-{\color{darkred}\rule{\textwidth}{0.5pt}}
+%\mylessons{#1}
+%\vbox{\noindent\colorbox{darkred}{{\color{white}\large\bfseries\sffamily Урок \thelektion}}\hfill\\[-8pt]
+%{\color{darkred}\rule{\textwidth}{0.5pt}}
 %\nopagebreak
-\noindent {\small\itshape #1}\nopagebreak
-\setcounter{enumi}{0}
-}}
+%\noindent {\small\itshape #1}\nopagebreak
+%\setcounter{enumi}{0}
+%}
+}
 
 
 % ВРЕЗКИ (КОММЕНТАРИИ в ТЕКСТЕ)
@@ -426,6 +434,7 @@
 \newcommand{\Om}{\Omega}
 \newcommand{\De}{\Delta}
 \newcommand{\A}{\mathbb A}
+\newcommand{\AZ}{\mathbb AZ}
 \newcommand{\e}{\mathsf e}
 \newcommand{\F}{\mathfrak F}
 \newcommand{\T}{\mathbb T}
@@ -561,7 +570,7 @@
 %  numbers=left,                   % С какой стороны нумеровать
 %  numberstyle=\tiny\color{gray},     % Стиль который будет использоваться для нумерации строк
   captionpos=t,
-%  stepnumber=1,                   % Шаг между линиями. Если 1, то будет пронумерована каждая строка 
+%  stepnumber=1,su)                   % Шаг между линиями. Если 1, то будет пронумерована каждая строка 
   numbersep=5pt,                  
 %  backgroundcolor=color{white},      % Цвет подложки. Вы должны добавить пакет color - usepackage{color}
 %  showspaces=false,               
@@ -687,23 +696,23 @@
 \newpage
 
 \fancyhead{}  % очистим хидер
-\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|} % номер страницы слева на четных
-\fancyfoot[RO]{|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
+\fancyfoot[LE]{\makebox[4ex][l]{\bfseries\thepage}\;|} % номер страницы слева на четных
+\fancyfoot[RO]{|\;\makebox[4ex][r]{\bfseries\thepage}} % номер страницы справа на нечетных
 
 \newpage
-\addcontentsline{toc}{chapter}{Список уроков}
-\listofmylessons
+%\addcontentsline{toc}{chapter}{Список уроков}
+%\listofmylessons
 
 
 %\input{LevelBeta}
 
-\input{Appendix}
+%\input{Appendix}
 
 \newpage
 
 \fancyhead{}  % очистим хидер
-\fancyfoot[LE]{\makebox[4ex][l]{\sffamily\bfseries\thepage}\;|} % номер страницы слева на четных
-\fancyfoot[RO]{|\;\makebox[4ex][r]{\sffamily\bfseries\thepage}} % номер страницы справа на нечетных
+\fancyfoot[LE]{\makebox[4ex][l]{\bfseries\thepage}\;|} % номер страницы слева на четных
+\fancyfoot[RO]{|\;\makebox[4ex][r]{\bfseries\thepage}} % номер страницы справа на нечетных
 
 
 \addcontentsline{toc}{chapter}{Предметный указатель}
@@ -714,70 +723,29 @@
 \addcontentsline{toc}{chapter}{\bibname}
 \markboth{\sffamily Список литературы}{\sffamily Список литературы}
 
-\subsection*{Общематематические книги}
-
-\bibitem{Arnold} Арнольд~В.~И. \href{http://ilib.mccme.ru/djvu/arnold/ngbg.djvu?djvuopts&page=6}{Гюйгенс и Барроу, Ньютон и Гук.} --- М.: Наука, 1989.
-\bibitem{Boss} Босс~В. \href{https://booksee.org/book/467231}{Интуиция и математика}. --- Ленанд, 2017.
-\bibitem{Knuth:Concrete} Грэхем~Р., Кнут~Д., Паташник~О. \href{https://may.alleng.org/d/math/math163.htm}{Конкретная математика.} --- М.: Мир, 1998.
-\bibitem{Archetypes} Казимиров~Н.~И. \href{https://mathem.at}{Архетипы математики}. --- М.: Юстицинформ, 2019.
-\bibitem{Klain} Клайн~М. \href{http://vekordija.narod.ru/R-KLINE1.PDF}{Математика. Утрата определенности}. --- М.: Мир, 1984.
-\bibitem{Math} \href{https://book.etudes.ru/}{Математическая составляющая} / Редакторы-составители Н.~Н.~Андреев, С.~П.~Коновалов, Н.~М.~Панюнин; Художник-оформитель Р.~А.~Кокшаров. --- М.: Фонд <<Мате­мати­ческие этюды>>, 2019.
-\bibitem{Curant} Курант~Р., Роббинс~Г. \href{http://ilib.mccme.ru/pdf/kurant.pdf}{Что такое математика?} --- Изд. 7-е., стереот. --- М.: МЦНМО, 2015. (для гуманитариев!)
-\bibitem{Problems} \href{https://math.ru/lib/377}{Проблемы Гильберта} / под ред. П.~С.~Александрова --- М., Наука, 1969.
-\bibitem{Savva} Савватеев~А.~В. \href{https://savvateev.xyz/media/savva-book-new.pdf}{Математика для гуманитариев}. --- М. Русский фонд содействия образованию и науке, 2020.
-\bibitem{Usp0} Успенский~В.~А. \href{https://mccme.ru/free-books/uspenskii2/uspensky.pdf}{Математическое и гуманитарное: преодоление барьера}. --- М.:МЦНМО, 2011.
-\bibitem{Foss} Фосс~А.~Э. \href{https://obuchalka.org/2014051577400/suschnost-matematiki-foss-aurel-edmund-2009.html}{Сущность математики}: Пер. с нем. Изд. 3-е. --- М.: Книжный дом <<ЛИБРОКОМ>>, 2009. (курс «Математика для всех», неделя 6, лекция 1)
-
-\subsection*{Логика и Теория множеств}
-
+\bibitem{AIRLAND} Айерленд~К., Роузен~М. Классическое введение в современную теорию чисел. --- М.: Мир, 1987.
+\bibitem{Arnold} Арнольд~В.~И. Гюйгенс и Барроу, Ньютон и Гук. --- М.: Наука, 1989.
+\bibitem{Berger} Берже.М. Геометрия: Пер. с франц. --- М.: Мир, 1984.
+\bibitem{VanderVarden} Ван~дер~Варден~Б.~Л. Алгебра. --- М.: Наука, 1976.
 \bibitem{Vereschagin} Верещагин~Н.~К., Шень~А. \href{https://www.mccme.ru/free-books/shen/shen-logic-part1-2.pdf}{Начала теории множеств}. --- М.: МЦМНО, 2012. 
-\bibitem{Dragalin} Колмогоров~А.~Н., Драгалин~А.~Г. \href{https://www.phantastike.com/math/matematicheskaya_logika/djvu/}{Математическая логика} Изд. 3-е, стереотипное. — М.: КомКнига, 2006.
-\bibitem{Kohen} Коэн~П.~Дж. \href{http://bookfi.net/dl/440950/e8a96b}{Теория множеств и континуум-гипотеза}. --- М.: Мир, 1969.
-\bibitem{Usp} Успенский~В.~А., Верещагин~Н.~К., Плиско~В.~Е. \href{https://fileskachat.com/getfile/19485_2a40998a4dda0d3289d2f989d97516c7}{Вводный курс математической логики}. --- 2-е изд. --- М.:Физматлит, 2004.
-\bibitem{Henle} Henle~James~M. \href{https://www.twirpx.com/file/651231/}{An Outline of Set Theory}. --- New York etc.: Springer-Verlag, 1986. Русская версия: Хенл~Дж.~М. Введение в теорию множеств: Пер. с англ. --- М.: Радио и связь, 1993.
-
-
-
-\subsection*{Алгебра и Теория чисел}
-
-\bibitem{AIRLAND} Айерленд~К., Роузен~М. \href{http://ega-math.narod.ru/Books/Ireland.htm}{Классическое введение в современную теорию чисел}. --- М.: Мир, 1987.
-\bibitem{Atlas} \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{Атлас представлений конечных групп} [Электронный ресурс] --- Режим доступа: \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{http://brauer.maths.qmul.ac.uk/Atlas/v3/}, свободный.
-\bibitem{Artin} Артин~Э. \href{https://1lib.eu/dl/441345/0526c3}{Теория Галуа}. Пер. с англ. А.~В.~Самохина. --- М.: МЦМНО, 2004.
-\bibitem{VanderVarden} Ван~дер~Варден~Б.~Л. \href{https://obuchalka.org/2013070372271/algebra-van-der-varden-b-l.html}{Алгебра}. --- М.: Наука, 1976.
-\bibitem{Winberg} Винберг~Э.~Б. \href{https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxraG1lbG5pdG1ldGF1YXxneDozMDhiMmU3NTg2MzJhNTY0}{Курс алгебры}. --- М.: Факториал Пресс, 2001.
-\bibitem{Helfand} Гельфанд~И.~М. \href{https://obuchalka.org/2013062272049/lekcii-po-lineinoi-algebre-gelfand-i-m-1998.html}{Лекции по линейной алгебре}. --- М.:МЦНМО, 1998.
-\bibitem{ZS} Зарисский~О., Самюэль~П. \href{http://bookre.org/reader?file=1500259}{Коммутативная алгебра}, том 2. --- М.: ИЛ, 1963.
-\bibitem{Korn} Корн~Г., Корн~Т. \href{https://obuchalka.org/2012030563848/spravochnik-po-matematike-korn-g-korn-t-1973.html}{Алгебра матриц и матричное исчисление} // Справочник по математике. --- 4-е издание. --- М: Наука, 1978.
-\bibitem{Kostrikin} Кострикин~А.~И. \href{https://obuchalka.org/2017012692830/vvedenie-v-algebru-chast-1-osnovi-algebri-kostrikin-a-i-2004.html}{Введение в алгебру}. --- М. ФИЗМАТЛИТ, 2004.
-\bibitem{KM} Кострикин~А.~И., Манин~Ю.~И. \href{https://obuchalka.org/20100416367/lineinaya-algebra-i-geometriya-uchebnik-kostrikin-a-i-manin-u-i.html}{Линейная алгебра и геометрия}.
-\bibitem{Kurosh} Курош~А.~Г. \href{https://obuchalka.org/20100418381/obschaya-algebra-uchebnik-kurosh-a-g-1970.html}{Общая алгебра}. --- М.: Наука, 1974.
-\bibitem{Leng} Ленг~С. \href{https://obuchalka.org/2013070572293/algebra-leng-s.html}{Алгебра}. --- М.: Наука, 1971.
-\bibitem{Postnikov} Постников~М.~М. \href{https://1lib.eu/dl/706426/5cdc12}{Теория Галуа}. --- М.: Физматлит, 1963.
-\bibitem{PrasolovAlg} Прасолов~В.~В. \href{ftp://ftp.mccme.ru/users/prasolov/polynoms/poly.pdf}{Многочлены}. 4-е изд., испр. --- М.: МЦНМО, 2014.
-\bibitem{Chashkin} Чашкин~А.~В., Жуков~Д.~А. \href{http://ebooks.bmstu.press/catalog/117/book1467.html}{Элементы конечной алгебры}. --- М.: Изд. МГТУ им.Баумана, 2016.
-\bibitem{Permutations} Шень~А. \href{https://mccme.ru/shen/permutations.pdf}{Перестановки}. М.:МЦНМО, 2020.
-\bibitem{MilesReid} Reid~M. \href{https://homepages.warwick.ac.uk/~masda/MA3D5/Galois.pdf}{Galois Theory}. --- University of Warwick, Coventry, 2014.
-
-
-\subsection*{Анализ, Геометрия, Топология}
-
-\bibitem{Arn} Арнольд~В.~И. \href{https://mccme.ru/arnold/books/odu-12.pdf}{Обыкновенные дифференциальные уравнения}. --- М.:МЦНМО, 2012.
-\bibitem{Berge} Берже~М. \href{https://obuchalka.org/2013062272057/geometriya-tom-1-berje-m-1984.html}{Геометрия}: Пер. с франц. --- М.:Мир, 1984. (тома 1 и 2)
-\bibitem{Borovkov} Боровков~А.~А. \href{https://vk.com/doc126754362_437580661?hash=bf4881377ccffd3181&dl=e2a6fd73b6ca9524a6}{Теория вероятностей}: Учеб. пособие для вузов. --- М.: Эдиториал УРСС, 1999.
-\bibitem{Domrin} Домрин~А.~В., Сергеев~А.~Г. \href{http://www.mi-ras.ru/books/pdf/ser1.pdf}{Лекции по комплексному анализу. В 2 частях}. --- М.: МИАН, 2004.
-\bibitem{Zorich} Зорич~В.~А. \href{https://may.alleng.org/d/math/math460.htm}{Математический анализ}. --- М.: ФАЗИС; Наука; Ч.I., 1997; Ч.II., 1984.
-\bibitem{Karatn} Картан~А. \href{https://ikfia.ysn.ru/wp-content/uploads/2018/01/Kartan1963ru.pdf}{Элементарная теория аналитических функций одного и нескольких комплексных переменных}. --- М.ИИЛ, 1963.
-\bibitem{KolmFomin} Колмогоров~А.~Н., Фомин~С.~В. \href{https://b-ok.cc/book/443504/108801}{Элементы теории функций и функционального анализа}
-\bibitem{Plahov} Плахов~А.~Ю. \href{http://www.etudes.ru/data/localdocs/umn_plahov.pdf}{Рассеяние в биллиардах и задачи ньютоновской аэродинамики} // Успехи математических наук. --- 2009. --- Т.64. Вып.5 (389). --- С. 97—166.
-\bibitem{Prasol} Прасолов~В~.В. \href{https://yadi.sk/d/teZTJ7wC7L4r2}{Геометрия Лобачевского}. --- М.: МЦНМО, 2016.
-\bibitem{Prasolov} Прасолов~В~.В., Тихомиров~В.~М. \href{http://prasolov.loegria.net/Geometry.pdf}{Геометрия}. --- М.: МЦНМО, 2007.
-\bibitem{Prasol1} Прасолов~В~.В. \href{ftp://ftp.mccme.ru/users/prasolov/nagltop/pra.pdf}{Наглядная топология}. --- М.: МЦНМО, 1995.
-\bibitem{Rudin} Рудин.~У. \href{https://may.alleng.org/d/math/math344.htm}{Основы математического анализа}. Пер. с англ. Изд. 2-е. --- М.: Мир, 1976.
-\bibitem{Fichtenholz} Фихтенгольц~Г.~М. \href{https://obuchalka.org/201012217156/kurs-differencialnogo-i-integralnogo-ischisleniya-fihtengolc-g-m.html}{Курс дифференциального и интегрального исчисления}. В 3 т. Изд. 8-е. --- М.:Физматлит, 2003
-\bibitem{Feller} Феллер~В. \href{https://obuchalka.org/2013071272400/vvedenie-v-teoriu-veroyatnostei-i-ee-prilojeniya-tom-1-feller-v-1963.html}{Введение в теорию вероятностей и ее приложения}. --- М.:Мир, 1963.
-\bibitem{Engelking} Engelking~R. General Topolgy. --- Warszawa.: PWN, 1977. \textit{Русское издание}: Энгелькинг~Р. \href{https://www.studmed.ru/engelking-r-obschaya-topologiya_14e4d9ddf48.html}{Общая топология}. --- М.: Мир, 1986.
-
+\bibitem{Gelf} Гельфанд~И.~М. Лекции по линейной алгебре. --- М.:Наука, 1971.
+\bibitem{Knuth:Concrete} Грэхем~Р., Кнут~Д., Паташник~О. Конкретная математика. --- М.: Мир, 1998.
+\bibitem{Domrin} Домрин~А.~В., Сергеев~А.~Г. \href{http://www.mi-ras.ru/books/pdf/ser1.pdf}{Лекции по комплексному анализу. В 2 частях}. --- М.:МИАН, 2004.
+\bibitem{zaris} Зарисский~О., Самюэль~П. Коммутативная алгебра. В двух томах. --- М.: ИИЛ, 1963.
+\bibitem{Zorich} Зорич.В.А. Математический анализ. Часть I и Часть II. --- 6-е изд., дополн. --- М.:МЦНМО, 2012.
+\bibitem{Klain} Клайн~М. Математика. Утрата определенности. --- М.: Мир, 1984.
+\bibitem{Curant} Курант~Р., Роббинс~Г. Что такое математика? --- Изд. 7-е., стереот. --- М.: МЦНМО, 2015.
+\bibitem{Kostrikin} Кострикин~А.~И. Введение в алгебру. --- М. ФИЗМАТЛИТ, 2004.
+\bibitem{KostrikinManin} Кострикин~А.~И., Манин~Ю.~И. Линейная алгебра и геометрия. Учебное пособие для вузов. --- 2-е изд., перераб. --- М.: Наука, 1986.
+\bibitem{Math} Математическая составляющая / Редакторы-составители Н.~Н.~Андреев, С.~П.~Коновалов, Н.~М.~Панюнин; Художник-оформитель Р.~А.~Кокшаров. --- М.: Фонд <<Мате­мати­ческие этюды>>, 2015.
+\bibitem{PrasolovAlg} Прасолов~В.~В. Многочлены. 4-е изд., испр. --- М.: МЦНМО, 2014.
+\bibitem{Pras} Прасолов~В.~В. Наглядная топология. --- 3-е изд., стереотип. --- М.:МЦНМО, 2012.
+\bibitem{Reid} Рид~К. Гильберт. --- М.: Наука, 1977.
+\bibitem{rudin} Рудин.~У. Основы математического анализа. --- М. <<Мир>>, 1976.
+\bibitem{Savva} Савватеев~А.~В. Математика для гуманитариев. Живые лекции. --- М.:
+Русский фонд содействия образованию и науке, 2019.
 \end{thebibliography}
+
 
 
 \begin{comment}
